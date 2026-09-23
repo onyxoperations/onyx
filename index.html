@@ -1840,10 +1840,24 @@
           z-index: 12;
         }
         .demo-tabs {
-          padding-bottom: 3px;
+          display: grid;
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+          gap: 6px;
+          overflow: visible;
+          padding-bottom: 0;
         }
         .demo-tab {
+          min-width: 0;
           min-height: 42px;
+          padding: 9px 8px;
+          white-space: normal;
+          justify-content: center;
+          text-align: center;
+          line-height: 1.2;
+        }
+        .demo-tab .sym {
+          width: auto;
+          flex: 0 0 auto;
         }
         .demo-main {
           overflow: hidden;
@@ -1942,6 +1956,13 @@
         .demo-side {
           top: 74px;
           padding: 10px;
+        }
+        .demo-tabs {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+        .demo-tab {
+          justify-content: flex-start;
+          text-align: left;
         }
         .demo-main {
           padding: 18px 12px 20px;
