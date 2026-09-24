@@ -1950,6 +1950,99 @@
       .settings-nav{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:16px;}
       .file-icon{width:36px;height:36px;border-radius:8px;display:grid;place-items:center;font-size:16px;flex:0 0 auto;background:rgba(255,255,255,.06);}
       @media(max-width:760px){.bell-panel{right:-10px;}.int-grid{grid-template-columns:1fr;}}
+
+      /* Industry pricing comparison */
+      .comparison {
+        background: rgba(255, 255, 255, 0.025);
+        border-top: 1px solid var(--line);
+      }
+      .comparison-rows {
+        border-top: 1px solid var(--line);
+      }
+      .comparison-row {
+        display: grid;
+        grid-template-columns: 130px minmax(0, 1fr) auto;
+        gap: 34px;
+        align-items: center;
+        padding: 34px 4px;
+        border-bottom: 1px solid var(--line);
+      }
+      .comparison-employees strong {
+        display: block;
+        font-size: clamp(30px, 3.2vw, 42px);
+        line-height: 1;
+        letter-spacing: -0.04em;
+      }
+      .comparison-employees span {
+        color: var(--muted);
+        font-size: 10px;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+      }
+      .comparison-flow {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        flex-wrap: wrap;
+      }
+      .price-block small {
+        display: block;
+        color: var(--muted);
+        font-size: 10px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.16em;
+        margin-bottom: 5px;
+      }
+      .price-block .price {
+        font-size: 18px;
+        font-weight: 800;
+        white-space: nowrap;
+      }
+      .price-block.other .price {
+        color: var(--muted);
+      }
+      .price-block.onyx .price em {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 12px;
+        color: var(--muted);
+      }
+      .flow-arrow {
+        color: var(--muted);
+        font-size: 20px;
+      }
+      .savings-pct {
+        text-align: right;
+      }
+      .savings-pct strong {
+        display: block;
+        font-size: clamp(32px, 3.6vw, 46px);
+        line-height: 1;
+        letter-spacing: -0.04em;
+        color: var(--terra);
+      }
+      .savings-pct span {
+        color: var(--muted);
+        font-size: 10px;
+        text-transform: uppercase;
+        letter-spacing: 0.16em;
+      }
+      .comparison-sources {
+        margin-top: 18px;
+        color: var(--muted);
+        font-size: 11px;
+        line-height: 1.7;
+      }
+      @media (max-width: 760px) {
+        .comparison-row {
+          grid-template-columns: 1fr;
+          gap: 16px;
+          padding: 26px 2px;
+        }
+        .savings-pct { text-align: left; }
+        .comparison-flow { gap: 20px; }
+      }
       /* ================= RESPONSIVE POLISH ================= */
       html,
       body {
@@ -2386,6 +2479,22 @@
             No problem. Onyx can scale with your organization. Contact our sales team to discuss a plan tailored to your workforce and requirements.
           </p><a class="btn primary" href="mailto:hello@onyxhrms.com">Contact Sales</a>
           
+        </div>
+      </section>
+
+      <section class="section comparison" id="comparison">
+        <div class="wrap">
+          <div class="section-head">
+            <div>
+              <span class="kicker">Industry comparison</span>
+              <h2>Save up to <span class="grad" id="industrySavePct">83%</span></h2>
+            </div>
+            <p>Onyx next to publicly listed pricing from other HR software in Pakistan.</p>
+          </div>
+          <div class="comparison-rows" id="industryRows"></div>
+          <p class="comparison-sources">
+            Based on publicly listed prices from other Pakistani HR software providers, checked 24 September 2026. Their plans bill annually with fixed headcount tiers, and included features vary by tier.
+          </p>
         </div>
       </section>
       <section class="closing" id="contact">
@@ -4740,6 +4849,37 @@ billing: `<p><strong>Last Updated:</strong> [Date]</p>
       };
       renderCarousel();
       restartCarousel();
+
+      const industryRows = $("#industryRows");
+      const industrySavePct = $("#industrySavePct");
+      function onyxMonthlyFor(count) {
+        const plan = prices.find((item) => count <= item.limit) || prices[prices.length - 1];
+        return { total: plan.monthly, label: plan.name };
+      }
+      function otherMonthlyFor(count) {
+        if (count <= 50) return { total: 5000, label: "Up to 50 employees" };
+        if (count <= 100) return { total: 15000, label: "Up to 100 employees" };
+        if (count <= 200) return { total: 55000, label: "Up to 200 employees" };
+        return { total: 120000, label: "Up to 500 employees" };
+      }
+      function renderIndustryComparison() {
+        if (!industryRows) return;
+        const tiers = [100, 200, 500];
+        let maxPct = 0;
+        industryRows.innerHTML = tiers
+          .map((count) => {
+            const onyx = onyxMonthlyFor(count);
+            const other = otherMonthlyFor(count);
+            const savings = Math.max(0, other.total - onyx.total);
+            const pct = other.total ? Math.round((savings / other.total) * 100) : 0;
+            if (pct > maxPct) maxPct = pct;
+            const badge = `<strong>${pct}%</strong><span>savings</span>`;
+            return `<div class="comparison-row"><div class="comparison-employees"><strong>${count}</strong><span>employees</span></div><div class="comparison-flow"><div class="price-block other"><small>Industry</small><span class="price">${money(other.total)}</span></div><span class="flow-arrow" aria-hidden="true">→</span><div class="price-block onyx"><small>Onyx</small><span class="price">${money(onyx.total)} <em>/mo</em></span></div></div><div class="savings-pct">${badge}</div></div>`;
+          })
+          .join("");
+        if (industrySavePct) industrySavePct.textContent = maxPct + "%";
+      }
+      renderIndustryComparison();
       const downloadHtmlButton = $("#downloadHtml");
       if (downloadHtmlButton) downloadHtmlButton.onclick = () => {
         const clone = document.documentElement.cloneNode(true);
