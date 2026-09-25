@@ -167,14 +167,17 @@
         gap: 34px;
       }
       .brand {
-        display: inline-flex;
-        align-items: center;
-        gap: 10px;
-        font-size: 25px;
-        font-weight: 800;
-        letter-spacing: -0.065em;
-        white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  flex-shrink: 0;
       }
+        .brand img {
+  display: block;
+  width: 150px;
+  height: auto;
+  object-fit: contain;
+        }
       .brand-mark {
         width: 27px;
         height: 27px;
@@ -2355,12 +2358,9 @@
   <body>
     <header>
       <div class="wrap nav">
-        <a class="brand" href="#top"><span class="brand-mark"></span>Onyx<span style="
-              font-size: 9px;
-              letter-spacing: 0.2em;
-              color: #00c9ff;
-              margin-left: 5px;
-            ">HRMS</span></a>
+        <a class="brand" href="#top">
+  <img src="https://raw.githubusercontent.com/onyxoperations/onyx/refs/heads/main/logo.png" alt="Onyx HRMS" />
+        </a>
         <nav class="nav-links" id="navLinks">
           <a href="#demo">Demo</a><a href="#modules">Modules</a><a href="#pricing">Pricing</a><a href="#contact">Get started</a>
         </nav>
@@ -2513,7 +2513,9 @@
       <div class="wrap">
         <div class="footer-grid">
           <div>
-            <a href="#top" class="brand"><span class="brand-mark"></span>Onyx</a>
+            <a class="brand" href="#top">
+  <img src="https://raw.githubusercontent.com/onyxoperations/onyx/refs/heads/main/logo.png" alt="Onyx HRMS" />
+        </a>
             <p>Onyx AI HRMS is an enterprise management platform that automates HR operations and streamlines workforce efficiency across the employee lifecycle.</p>
           </div>
           <div class="footer-links">
