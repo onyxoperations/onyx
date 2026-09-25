@@ -945,22 +945,87 @@
       }
       .price-grid {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 16px;
+        grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+        gap: 24px;
       }
       .price-card {
+        position: relative;
         background: var(--glass);
         border: 1px solid var(--line);
-        border-radius: 15px;
-        padding: 30px;
+        border-radius: 18px;
+        padding: 26px 24px 24px;
         display: flex;
         flex-direction: column;
+        overflow: hidden;
+        transition:
+          transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+          border-color 0.35s,
+          box-shadow 0.35s;
+        animation: price-in 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
       }
+      .price-card:nth-child(2) { animation-delay: 0.07s; }
+      .price-card:nth-child(3) { animation-delay: 0.14s; }
+      .price-card:nth-child(4) { animation-delay: 0.21s; }
+      @keyframes price-in {
+        from { opacity: 0; transform: translateY(22px) scale(0.97); }
+        to { opacity: 1; transform: translateY(0) scale(1); }
+      }
+      .price-card:before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(
+          320px 200px at var(--mx, 50%) var(--my, 0%),
+          rgba(225, 112, 85, 0.12),
+          transparent 70%
+        );
+        opacity: 0;
+        transition: opacity 0.35s;
+        pointer-events: none;
+      }
+      .price-card:hover {
+        transform: translateY(-6px);
+        border-color: rgba(225, 112, 85, 0.45);
+        box-shadow: 0 22px 55px rgba(0, 0, 0, 0.35);
+      }
+      .price-card:hover:before { opacity: 1; }
       .price-card.featured {
         border-color: var(--terra);
         box-shadow:
           0 0 0 1px var(--terra),
-          0 25px 70px rgba(225, 112, 85, 0.08);
+          0 25px 70px rgba(225, 112, 85, 0.14);
+      }
+      .price-card.featured:after {
+        content: "";
+        position: absolute;
+        inset: -1px;
+        border-radius: 18px;
+        padding: 1px;
+        background: linear-gradient(
+          120deg,
+          transparent 30%,
+          rgba(255, 200, 180, 0.55) 50%,
+          transparent 70%
+        );
+        background-size: 250% 100%;
+        -webkit-mask:
+          linear-gradient(#000 0 0) content-box,
+          linear-gradient(#000 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+        animation: border-sheen 4.5s linear infinite;
+        pointer-events: none;
+      }
+      @keyframes border-sheen {
+        from { background-position: 200% 0; }
+        to { background-position: -50% 0; }
+      }
+      .price-card .plan-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        min-height: 24px;
       }
       .price-card .plan {
         font-size: 12px;
@@ -969,16 +1034,43 @@
         letter-spacing: 0.14em;
         text-transform: uppercase;
       }
+      .price-card .pop-badge {
+        font-size: 10px;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: #202729;
+        background: linear-gradient(120deg, var(--terra), var(--peach));
+        padding: 4px 10px;
+        border-radius: 999px;
+        animation: badge-pop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) 0.35s both;
+      }
+      @keyframes badge-pop {
+        from { opacity: 0; transform: scale(0.6); }
+        to { opacity: 1; transform: scale(1); }
+      }
       .price-card .capacity {
-        font-size: 22px;
+        font-size: 20px;
         font-weight: 750;
-        margin: 22px 0 3px;
+        margin: 12px 0 2px;
       }
       .price-card .amount {
-        font-size: 39px;
+        font-size: clamp(24px, 2.4vw, 36px);
         font-weight: 800;
         letter-spacing: -0.05em;
-        margin: 7px 0;
+        margin: 8px 0 4px;
+        display: flex;
+        align-items: baseline;
+        gap: 6px;
+        flex-wrap: wrap;
+      }
+      .price-card .amount .num {
+        display: inline-block;
+        animation: price-flip 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+      }
+      @keyframes price-flip {
+        from { opacity: 0; transform: translateY(12px); filter: blur(4px); }
+        to { opacity: 1; transform: translateY(0); filter: blur(0); }
       }
       .price-card .amount small {
         font-size: 12px;
@@ -986,26 +1078,87 @@
         font-weight: 400;
         letter-spacing: 0;
       }
-      .price-card p {
+      .price-card .note-line {
         font-size: 12px;
+        color: var(--muted);
+        min-height: 18px;
+        margin: 0 0 18px;
+        display: flex;
+        align-items: center;
+        gap: 7px;
       }
-      .price-card ul {
-        list-style: none;
-        padding: 17px 0;
-        margin: 10px 0 24px;
-        border-top: 1px solid var(--line);
-        color: #d7e0e1;
-        font-size: 12px;
-        display: grid;
-        gap: 8px;
-      }
-      .price-card li:before {
-        content: "✓";
+      .price-card .save-pill {
+        font-size: 10px;
+        font-weight: 800;
         color: var(--peach);
-        margin-right: 8px;
+        border: 1px solid rgba(225, 112, 85, 0.4);
+        background: rgba(225, 112, 85, 0.1);
+        padding: 2px 8px;
+        border-radius: 999px;
+        white-space: nowrap;
       }
       .price-card .btn {
         margin-top: auto;
+        transition:
+          transform 0.25s cubic-bezier(0.22, 1, 0.36, 1),
+          box-shadow 0.25s,
+          background 0.25s,
+          color 0.25s,
+          border-color 0.25s;
+      }
+      .price-card .btn:hover { transform: translateY(-2px); }
+      .price-card.featured .btn:hover {
+        box-shadow: 0 10px 26px rgba(225, 112, 85, 0.35);
+      }
+      .plan-included {
+        border: 1px solid var(--line);
+        border-radius: 15px;
+        background: var(--glass);
+        padding: 20px 26px;
+        margin: 0 0 27px;
+        display: flex;
+        align-items: baseline;
+        gap: 16px 26px;
+        flex-wrap: wrap;
+      }
+      .plan-included-label {
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--peach);
+        white-space: nowrap;
+      }
+      .plan-included ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 7px 22px;
+        font-size: 12px;
+        color: #d7e0e1;
+      }
+      .plan-included li {
+        display: flex;
+        align-items: center;
+        gap: 9px;
+      }
+      .plan-included .fi {
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+        border: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.05);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        flex: 0 0 auto;
+        color: var(--peach);
+      }
+      .plan-included .fi svg {
+        width: 12px;
+        height: 12px;
       }
       .billing {
         display: flex;
@@ -2461,7 +2614,7 @@
               </h2>
             </div>
             <p>
-              All three plans include the same complete feature set. Only
+              All four plans include the same complete feature set. Only
               employee capacity and price change.
             </p>
           </div>
@@ -2470,6 +2623,17 @@
               Monthly</button><button class="btn small" data-billing="annual">
               Annual · Save 20%
             </button>
+          </div>
+          <div class="plan-included" aria-label="Features included in every plan">
+            <span class="plan-included-label">Every plan includes</span>
+            <ul>
+              <li><span class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/><circle cx="10" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>People & complete employee records</li>
+              <li><span class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>Geo-fenced, shift-aware attendance</li>
+              <li><span class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></span>Leave requests, approvals & balances</li>
+              <li><span class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg></span>Payroll registers & printable salary slips</li>
+              <li><span class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></span>Recruitment pipeline & offers</li>
+              <li><span class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></span>All other core HR features</li>
+            </ul>
           </div>
           <div class="price-grid" id="priceGrid"></div>
           <p class="note" style="margin-top: 22px">
@@ -4732,7 +4896,6 @@ billing: `<p><strong>Last Updated:</strong> [Date]</p>
             }),
         );
       const prices = [
-        { name: "Startup", limit: 50, monthly: 2999, annual: 28790 },
   { name: "Core", limit: 100, monthly: 5499, annual: 52790 },
   { name: "Team", limit: 200, monthly: 8999, annual: 86390 },
   { name: "Business", limit: 300, monthly: 12499, annual: 119990 },
@@ -4741,11 +4904,21 @@ billing: `<p><strong>Last Updated:</strong> [Date]</p>
       let billing = "monthly";
       function renderPrices() {
         $("#priceGrid").innerHTML = prices
-          .map(
-            (p, i) =>
-              `<article class="price-card ${i === 1 ? "featured" : ""}"><span class="plan">${p.name}</span><div class="capacity">Up to ${p.limit} employees</div><p>Full access to every Onyx feature.</p><div class="amount">${money(billing === "monthly" ? p.monthly : p.annual)} <small>/${billing === "monthly" ? "month" : "year"}</small></div><p>${billing === "annual" ? `${money(p.annual / 12)} per month equivalent · save 20%` : "Annual billing saves 20%"}</p><ul><li>People & complete employee records</li><li>Geo-fenced, shift-aware attendance</li><li>Leave requests, approvals & balances</li><li>Payroll registers & printable salary slips</li><li>Recruitment pipeline & offers</li><li>All other core HR features</li></ul><a class="btn ${i === 1 ? "primary" : ""}" href="mailto:hello@onyxhrms.com?subject=${encodeURIComponent("Enquiry about " + p.name)}">Enquire about ${p.name.replace("Onyx ", "")} ↗</a></article>`,
-          )
+          .map((p, i) => {
+            const annual = billing === "annual";
+            const note = annual
+              ? `${money(p.annual / 12)}/mo equivalent <span class="save-pill">Save 20%</span>`
+              : `Billed monthly <span class="save-pill">Annual −20%</span>`;
+            return `<article class="price-card ${i === 0 ? "featured" : ""}"><div class="plan-row"><span class="plan">${p.name}</span>${i === 0 ? '<span class="pop-badge">Most popular</span>' : ""}</div><div class="capacity">Up to ${p.limit} employees</div><div class="amount"><span class="num">${money(annual ? p.annual : p.monthly)}</span><small>/${annual ? "year" : "month"}</small></div><div class="note-line">${note}</div><a class="btn ${i === 0 ? "primary" : ""}" href="mailto:hello@onyxhrms.com?subject=${encodeURIComponent("Enquiry about " + p.name)}">Enquire about ${p.name.replace("Onyx ", "")} ↗</a></article>`;
+          })
           .join("");
+        document.querySelectorAll(".price-card").forEach((card) => {
+          card.addEventListener("mousemove", (e) => {
+            const r = card.getBoundingClientRect();
+            card.style.setProperty("--mx", ((e.clientX - r.left) / r.width) * 100 + "%");
+            card.style.setProperty("--my", ((e.clientY - r.top) / r.height) * 100 + "%");
+          });
+        });
       }
       document.querySelectorAll("[data-billing]").forEach(
         (b) =>
@@ -4864,7 +5037,6 @@ billing: `<p><strong>Last Updated:</strong> [Date]</p>
         return { total: plan.monthly, label: plan.name };
       }
       function otherMonthlyFor(count) {
-        if (count <= 50) return { total: 6000, label: "Up to 50 employees" };
         if (count <= 100) return { total: 18000, label: "Up to 100 employees" };
         if (count <= 200) return { total: 66000, label: "Up to 200 employees" };
           if (count <= 300) return { total: 144000, label: "Up to 300 employees" };
@@ -4872,7 +5044,7 @@ billing: `<p><strong>Last Updated:</strong> [Date]</p>
       }
       function renderIndustryComparison() {
         if (!industryRows) return;
-        const tiers = [50, 100, 200, 300, 500];
+        const tiers = [100, 200, 300, 500];
         let maxPct = 0;
         industryRows.innerHTML = tiers
           .map((count) => {
