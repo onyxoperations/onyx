@@ -2492,11 +2492,11 @@
               <span class="kicker">Industry comparison</span>
               <h2>Save up to <span class="grad" id="industrySavePct">83%</span></h2>
             </div>
-            <p>Onyx next to publicly listed pricing from other HR software in Pakistan.</p>
+            <p>Onyx next to industry HR software.</p>
           </div>
           <div class="comparison-rows" id="industryRows"></div>
           <p class="comparison-sources">
-            Based on publicly listed prices from other Pakistani HR software providers, checked 24 September 2026. Their plans bill annually with fixed headcount tiers, and included features vary by tier.
+            Based on publicly listed prices from other Pakistani HR software providers, checked 24 September 2026.
           </p>
         </div>
       </section>
@@ -4862,14 +4862,14 @@ billing: `<p><strong>Last Updated:</strong> [Date]</p>
         return { total: plan.monthly, label: plan.name };
       }
       function otherMonthlyFor(count) {
-        if (count <= 50) return { total: 5000, label: "Up to 50 employees" };
-        if (count <= 100) return { total: 15000, label: "Up to 100 employees" };
-        if (count <= 200) return { total: 55000, label: "Up to 200 employees" };
-        return { total: 120000, label: "Up to 500 employees" };
+        if (count <= 50) return { total: 6000, label: "Up to 50 employees" };
+        if (count <= 100) return { total: 18000, label: "Up to 100 employees" };
+        if (count <= 300) return { total: 144000, label: "Up to 200 employees" };
+        return { total: 144000, label: "Up to 500 employees" };
       }
       function renderIndustryComparison() {
         if (!industryRows) return;
-        const tiers = [100, 200, 500];
+        const tiers = [100, 300, 500];
         let maxPct = 0;
         industryRows.innerHTML = tiers
           .map((count) => {
