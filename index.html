@@ -4732,10 +4732,12 @@ billing: `<p><strong>Last Updated:</strong> [Date]</p>
             }),
         );
       const prices = [
-        { name: "Core", limit: 100, monthly: 4999, annual: 47990 },
-        { name: "Business", limit: 300, monthly: 12999, annual: 124790 },
-        { name: "Enterprise", limit: 500, monthly: 19999, annual: 191990 },
-      ];
+        { name: "Startup", limit: 50, monthly: 2999, annual: 28790 },
+  { name: "Core", limit: 100, monthly: 5499, annual: 52790 },
+  { name: "Team", limit: 200, monthly: 8999, annual: 86390 },
+  { name: "Business", limit: 300, monthly: 12499, annual: 119990 },
+  { name: "Enterprise", limit: 500, monthly: 17499, annual: 167990 },
+];
       let billing = "monthly";
       function renderPrices() {
         $("#priceGrid").innerHTML = prices
@@ -4865,12 +4867,12 @@ billing: `<p><strong>Last Updated:</strong> [Date]</p>
         if (count <= 50) return { total: 6000, label: "Up to 50 employees" };
         if (count <= 100) return { total: 18000, label: "Up to 100 employees" };
         if (count <= 200) return { total: 66000, label: "Up to 200 employees" };
-          if (count <= 300) return { total: 144000, label: "Up to 200 employees" };
+          if (count <= 300) return { total: 144000, label: "Up to 300 employees" };
         return { total: 144000, label: "Up to 500 employees" };
       }
       function renderIndustryComparison() {
         if (!industryRows) return;
-        const tiers = [100, 200, 300, 500];
+        const tiers = [50, 100, 200, 300, 500];
         let maxPct = 0;
         industryRows.innerHTML = tiers
           .map((count) => {
