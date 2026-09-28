@@ -1,4 +1,5 @@
 
+
 <!doctype html>
 <html lang="en"><head>
     <meta charset="utf-8">
@@ -2546,6 +2547,53 @@
         #onyx-preloader { transition: none !important; }
       }
       @media print { #onyx-preloader { display: none !important; } }
+
+      /* Pricing reference treatment and added company sections */
+      .pricing-stage{position:relative;padding:42px;border:1px solid var(--line);border-radius:20px;background:#03010a;overflow:hidden;box-shadow:0 35px 100px rgba(0,0,0,.38)}
+      .pricing-stage:before{content:"";position:absolute;inset:0;background:radial-gradient(520px 220px at 54% 0%,rgba(250,80,10,.13),transparent 67%);pointer-events:none}
+      .pricing-stage>*{position:relative}
+      .pricing-top{display:flex;align-items:flex-end;justify-content:space-between;gap:32px;margin-bottom:26px}
+      .pricing-title h2{margin:12px 0 0;font-size:clamp(34px,4vw,58px);line-height:1.05;font-family:Inter,system-ui,sans-serif;font-weight:800;letter-spacing:0}
+      .pricing-title h2 .grad{font-style:normal}
+      .pricing-intro{max-width:660px;margin:14px 0 0;color:var(--muted);font-size:13px}
+      .pricing-side{display:grid;justify-items:end;gap:20px;text-align:right}
+      .billing{margin:0;padding:4px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.045);display:inline-flex}
+      .billing .btn{min-width:96px;border:0;border-radius:999px;background:transparent;padding:9px 16px}
+      .billing .btn.active{box-shadow:inset 0 0 0 1px rgba(250,80,10,.65)}
+      .price-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;align-items:start}
+      .price-card{min-height:0;padding:25px 22px 22px;border-radius:18px;background:linear-gradient(145deg,rgba(255,255,255,.075),rgba(255,255,255,.025));border-color:rgba(255,255,255,.12);font-family:Inter,system-ui,sans-serif}
+      .price-card.featured{border-color:rgba(250,80,10,.72);box-shadow:0 0 0 1px rgba(98,7,188,.5),0 24px 65px rgba(98,7,188,.22)}
+      .price-card .plan{font-size:17px;letter-spacing:0;text-transform:none;color:#fff}
+      .price-card .capacity{font-size:11px;font-weight:500;color:var(--muted);margin-top:3px;min-height:34px}
+      .price-card .original-price{display:block;margin-top:7px;color:var(--muted);font-size:12px;text-decoration:line-through;text-decoration-thickness:1px}
+      .price-card .amount{font-family:Inter,system-ui,sans-serif;font-size:34px;font-weight:800;letter-spacing:0;margin:1px 0 7px}
+      .price-card .note-line{padding:0;margin:0 0 15px;min-height:18px;border:0;font-size:11px}
+      .price-card .btn{width:100%;margin:0 0 19px;border-radius:999px}
+      .included-title{margin:0 0 13px;padding-top:16px;border-top:1px solid var(--line);font-size:12px;font-weight:800;color:#fff}
+      .plan-features{list-style:none;padding:0;margin:0;display:grid;gap:9px;color:#d5dcde;font-size:10px;line-height:1.4}
+      .plan-features li{display:grid;grid-template-columns:20px minmax(0,1fr) 16px;gap:7px;align-items:start}
+      .feature-icon{width:18px;height:18px;border:1px solid rgba(244,181,159,.45);border-radius:50%;display:grid;place-items:center;color:var(--peach);font-size:9px;line-height:1;background:rgba(225,112,85,.08)}
+      .feature-info{position:relative;width:15px;height:15px;border:1px solid rgba(255,255,255,.28);border-radius:50%;display:grid;place-items:center;color:var(--muted);font-size:9px;font-weight:800;cursor:help;margin-top:1px}
+      .feature-info:after{content:attr(data-tip);position:absolute;z-index:30;right:-6px;bottom:calc(100% + 8px);width:190px;padding:9px 10px;border:1px solid var(--line);border-radius:7px;background:#07011f;color:#fff;font-size:10px;font-weight:400;line-height:1.45;box-shadow:0 12px 35px rgba(0,0,0,.45);opacity:0;visibility:hidden;transform:translateY(4px);transition:.18s;pointer-events:none}
+      .feature-info:hover:after,.feature-info:focus:after{opacity:1;visibility:visible;transform:none}
+      .feature-info:focus{outline:2px solid var(--terra);outline-offset:2px}
+      .pricing-foot{display:flex;align-items:center;justify-content:space-between;gap:28px;margin-top:28px;padding-top:26px;border-top:1px solid var(--line)}
+      .pricing-foot h3{font-size:25px;margin:0 0 5px}.pricing-foot p{margin:0;font-size:12px}
+      .company-section{border-top:1px solid var(--line)}
+      .story-grid,.team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+      .story-card,.team-card{border:1px solid var(--line);border-radius:14px;background:var(--glass);padding:25px;transition:transform .25s,border-color .25s}
+      .story-card:hover,.team-card:hover{transform:translateY(-4px);border-color:rgba(250,80,10,.5)}
+      .story-icon,.step-num{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:var(--gradient-1);font-weight:800;margin-bottom:18px}
+      .story-card h3,.team-card h3{font-size:20px;margin:0 0 8px}.story-card p,.team-card p{font-size:13px;margin:0}
+      .expand-copy{margin-top:17px}.expand-copy summary{list-style:none;display:inline-flex;align-items:center;gap:8px;cursor:pointer;color:#fff;font-size:12px;font-weight:700;border:1px solid var(--line);border-radius:999px;padding:9px 15px}.expand-copy summary::-webkit-details-marker{display:none}.expand-copy summary:after{content:'+';color:var(--nv-orange);font-size:16px}.expand-copy[open] summary:after{content:'−'}.expand-copy div{padding-top:14px;color:var(--muted);font-size:12px;line-height:1.7}
+      .security-band{background:rgba(255,255,255,.025)}
+      .security-grid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(300px,.75fr);gap:48px;align-items:center}
+      .security-points{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.security-points div{border-bottom:1px solid var(--line);padding:15px 0;font-size:12px;color:#d8e0e2}.security-points strong{display:block;color:#fff;font-size:14px;margin-bottom:3px}
+      .team-head{display:flex;justify-content:space-between;align-items:flex-end;gap:25px;margin-bottom:28px}.team-role{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--nv-orange);font-weight:800}.team-card h3{margin-top:8px}
+      .setup-track{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--line)}
+      .setup-step{position:relative;padding:27px 24px 0 0}.setup-step:not(:last-child):after{content:'→';position:absolute;right:14px;top:36px;color:var(--muted)}.setup-step h3{font-size:17px;margin:0 0 7px}.setup-step p{font-size:12px;margin:0}.step-num{width:34px;height:34px;font-size:11px}
+      @media(max-width:1000px){.price-grid{grid-template-columns:repeat(2,1fr)}.pricing-top{align-items:flex-start}.pricing-side{justify-items:start;text-align:left}.story-grid,.team-grid{grid-template-columns:1fr 1fr}.setup-track{grid-template-columns:1fr 1fr}.setup-step:nth-child(2):after{display:none}}
+      @media(max-width:700px){.pricing-stage{padding:25px 16px}.pricing-top,.pricing-foot,.team-head{display:grid}.pricing-side{width:100%}.price-grid,.story-grid,.team-grid,.security-grid,.security-points,.setup-track{grid-template-columns:1fr}.price-card{min-height:0}.pricing-foot .btn{width:100%}.setup-step:not(:last-child):after{display:none}}
     </style>
   </head>
   <body>
@@ -2661,49 +2709,27 @@
       </section>
       <section class="section pricing" id="pricing">
         <div class="wrap">
-          <div class="section-head">
-            <div>
-              <span class="kicker">Simple, transparent pricing</span>
-              <h2>
-                Same features.<br><span class="grad">More room to grow.</span>
-              </h2>
+          <div class="pricing-stage">
+            <div class="pricing-top">
+              <div class="pricing-title">
+                <span class="kicker">Simple, transparent pricing</span>
+                <h2>Pricing that scales<br><span class="grad">with your team.</span></h2>
+                <p class="pricing-intro">Every plan includes the same...</p>
+              </div>
+              <div class="pricing-side">
+                <div class="billing" aria-label="Billing period">
+                  <button class="btn small active" data-billing="monthly">Monthly</button><button class="btn small" data-billing="annual">Yearly · Save 20%</button>
+                </div>
+              </div>
             </div>
-            <p>
-              All four plans include the same complete feature set. Only
-              employee capacity and price change.
-            </p>
+            <div class="price-grid" id="priceGrid"></div>
+            <div class="pricing-foot">
+              <div><h3>More than <span class="grad">500 employees?</span></h3><p>Onyx scales with your organization. We’ll tailor the plan to your workforce and requirements.</p></div>
+              <a class="btn primary" href="mailto:hello@onyxhrms.com">Contact Sales ↗</a>
+            </div>
           </div>
-          <div class="billing" aria-label="Billing period">
-            <button class="btn small active" data-billing="monthly">
-              Monthly</button><button class="btn small" data-billing="annual">
-              Annual · Save 20%
-            </button>
-          </div>
-          <div class="plan-included" aria-label="Features included in every plan">
-            <span class="plan-included-label">Every plan includes</span>
-            <ul>
-              <li><span class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/><circle cx="10" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>People & complete employee records</li>
-              <li><span class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>Geo-fenced, shift-aware attendance</li>
-              <li><span class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></span>Leave requests, approvals & balances</li>
-              <li><span class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg></span>Payroll registers & printable salary slips</li>
-              <li><span class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></span>Recruitment pipeline & offers</li>
-              <li><span class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></span>All other core HR features</li>
-            </ul>
-          </div>
-          <div class="price-grid" id="priceGrid"></div>
-          <p class="note" style="margin-top: 22px">
-            All features included across all plans—priced per employee. Actual feature activation is tailored to your workflow before purchase.
-          </p>
-          <br>
-          <h2>More than
-                <span class="grad">500 employees?</span>
-              </h2><p class="note" style="margin-top: 22px">
-            No problem. Onyx can scale with your organization. Contact our sales team to discuss a plan tailored to your workforce and requirements.
-          </p><a class="btn primary" href="mailto:hello@onyxhrms.com">Contact Sales</a>
-          
         </div>
       </section>
-
       <section class="section comparison" id="comparison">
         <div class="wrap">
           <div class="section-head">
@@ -2717,6 +2743,33 @@
           <p class="comparison-sources">
             Based on publicly listed prices from other Pakistani HR software providers, checked 24 September 2026.
           </p>
+        </div>
+      </section>
+      <section class="section company-section" id="about">
+        <div class="wrap">
+          <div class="section-head"><div><span class="kicker">About Onyx</span><h2>HR built around<br><span class="grad">how you work.</span></h2></div><p>Onyx connects the employee lifecycle in one adaptable workspace for growing teams in Pakistan.</p></div>
+          <div class="story-grid">
+            <article class="story-card"><span class="story-icon">01</span><h3>One connected system</h3><p>People, time, pay, leave and hiring stay in sync.</p><details class="expand-copy"><summary>Read More</summary><div>Onyx replaces disconnected spreadsheets and tools with one source of truth, helping HR teams move faster with fewer manual handoffs.</div></details></article>
+            <article class="story-card"><span class="story-icon">02</span><h3>Made for real operations</h3><p>Flexible rules support the way your teams actually run.</p><details class="expand-copy"><summary>Read More</summary><div>Configure shifts, approvals, attendance rules, payroll structures and employee workflows around your organization rather than changing your organization around software.</div></details></article>
+            <article class="story-card"><span class="story-icon">03</span><h3>Ready to evolve</h3><p>Start with what matters now and expand with confidence.</p><details class="expand-copy"><summary>Read More</summary><div>Onyx is designed to grow from essential employee administration into a complete operating layer for your people function.</div></details></article>
+          </div>
+        </div>
+      </section>
+      <section class="section company-section security-band" id="security">
+        <div class="wrap security-grid">
+          <div><span class="kicker">Security at every layer</span><h2>Your people data stays<br><span class="grad">protected.</span></h2><p>Onyx is designed around controlled access, accountable actions and responsible data handling.</p><details class="expand-copy"><summary>Read More</summary><div>Role-based permissions help ensure people only see what they need. Sensitive records can be restricted, important actions remain traceable, and access can be updated as responsibilities change. Security controls are applied across employee records, attendance, payroll and documents.</div></details></div>
+          <div class="security-points"><div><strong>Role-based access</strong>Permissions aligned to responsibilities.</div><div><strong>Activity visibility</strong>Important actions remain accountable.</div><div><strong>Protected records</strong>Sensitive employee data stays controlled.</div><div><strong>Responsible access</strong>Access can change as your team does.</div></div>
+        </div>
+      </section>
+      <section class="section company-section" id="team">
+        <div class="wrap">
+          <div class="team-head"><div><span class="kicker">Meet the team</span><h2>People building for<br><span class="grad">people teams.</span></h2></div><a class="btn primary" href="mailto:hello@onyxhrms.com?subject=Onyx%20career%20opportunities">See Vacancies ↗</a></div>
+          <div class="team-grid"><article class="team-card"><span class="team-role">Product</span><h3>Human-first systems</h3><p>Turning complex HR operations into clear, practical everyday workflows.</p></article><article class="team-card"><span class="team-role">Engineering</span><h3>Reliable foundations</h3><p>Building the connected platform that keeps teams and their data moving safely.</p></article><article class="team-card"><span class="team-role">Customer success</span><h3>Partnership from day one</h3><p>Helping every organization configure Onyx around its own way of working.</p></article></div>
+        </div>
+      </section>
+      <section class="section company-section" id="setup">
+        <div class="wrap"><div class="section-head"><div><span class="kicker">Getting started</span><h2>From setup to<br><span class="grad">ready to run.</span></h2></div><p>A guided onboarding path shaped around your workforce, policies and priorities.</p></div>
+          <div class="setup-track"><article class="setup-step"><span class="step-num">01</span><h3>Discover</h3><p>We map your team structure, rules and current workflows.</p></article><article class="setup-step"><span class="step-num">02</span><h3>Configure</h3><p>Your workspace, permissions, policies and payroll are tailored.</p></article><article class="setup-step"><span class="step-num">03</span><h3>Bring your data</h3><p>Employee records are prepared and moved into Onyx.</p></article><article class="setup-step"><span class="step-num">04</span><h3>Launch together</h3><p>Your team gets guided support as Onyx goes live.</p></article></div>
         </div>
       </section>
       <section class="closing" id="contact">
@@ -5305,10 +5358,33 @@ billing: `<p><strong>Last Updated:</strong> 9/26/2026</p>
         $("#priceGrid").innerHTML = prices
           .map((p, i) => {
             const annual = billing === "annual";
-            const note = annual
-              ? `${money(p.annual / 12)}/mo equivalent <span class="save-pill">Save 20%</span>`
-              : `Billed monthly <span class="save-pill">Annual −20%</span>`;
-            return `<article class="price-card ${i === 0 ? "featured" : ""}"><div class="plan-row"><span class="plan">${p.name}</span>${i === 0 ? '<span class="pop-badge">Most popular</span>' : ""}</div><div class="capacity">Up to ${p.limit} employees</div><div class="amount"><span class="num">${money(annual ? p.annual : p.monthly)}</span><small>/${annual ? "year" : "month"}</small></div><div class="note-line">${note}</div><a class="btn ${i === 0 ? "primary" : ""}" href="mailto:hello@onyxhrms.com?subject=${encodeURIComponent("Enquiry about " + p.name)}">Enquire about ${p.name.replace("Onyx ", "")} ↗</a></article>`;
+            const discounted = annual ? p.annual : p.monthly;
+            const original = annual ? p.monthly * 12 : Math.round(p.monthly / 0.8);
+            const note = annual ? `PKR ${Math.round(p.annual / 12).toLocaleString("en-PK")}/mo equivalent` : "Billed monthly";
+            const features = [
+              ["Employee management & records", "Keep complete employee profiles, documents, job details, and employment records together.", "👤"],
+              ["Geo-fenced biometric web attendance", "Record verified attendance only from approved workplace locations.", "◎"],
+              ["Shift assigning & management", "Create shifts, assign teams, and manage schedules from one place.", "◷"],
+              ["Leave requests, approvals, and balances", "Let employees request leave while managers approve and track balances.", "▣"],
+              ["Performance management & KPIs", "Set goals and KPIs, review progress, and document employee performance.", "↗"],
+              ["Employee lifecycle management", "Manage onboarding, role changes, confirmations, transfers, and offboarding.", "↻"],
+              ["Payroll automations & deductions", "Automate payroll calculations, recurring adjustments, and deductions.", "₨"],
+              ["One-click salary slips generation", "Generate clear employee salary slips from completed payroll records.", "▤"],
+              ["Recruitment pipeline management", "Track candidates through screening, interviews, offers, and hiring.", "◇"],
+              ["Secure drive management for HR files", "Organize sensitive HR documents in a controlled company file space.", "▰"],
+              ["One-click file generation for employees", "Create common employee letters and documents from saved records.", "＋"],
+              ["Template customization & file editor", "Customize reusable HR templates and edit generated documents.", "✎"],
+              ["Daily, weekly, monthly, and annual reports", "Review workforce activity and trends across flexible reporting periods.", "▥"],
+              ["Task assigning & management", "Assign tasks, set expectations, and monitor completion across teams.", "☷"],
+              ["Self-service employee portal", "Give employees direct access to their records, requests, and documents.", "◉"],
+              ["Messenger for live chat & groups", "Support real-time workplace conversations in direct and group chats.", "◌"],
+              ["Biometric device integration (where applicable)", "Connect supported biometric attendance devices when available.", "⌁"],
+              ["Role-based authentication for access", "Control access according to each user’s role and responsibilities.", "⊙"],
+              ["Limited quota for daily task execution", "Apply a defined daily allowance to task executions under the plan.", "◒"],
+              ["24/7 troubleshooting support", "Get round-the-clock help for troubleshooting and service issues.", "?"],
+            ];
+            const featureList = features.map(([feature, tip, icon]) => `<li><span class="feature-icon" aria-hidden="true">${icon}</span><span>${feature}</span><span class="feature-info" tabindex="0" aria-label="More information about ${feature}" data-tip="${tip}">?</span></li>`).join("");
+            return `<article class="price-card ${i === 0 ? "featured" : ""}"><div class="plan-row"><span class="plan">${p.name}</span>${i === 0 ? '<span class="pop-badge">Most popular</span>' : ""}</div><div class="capacity">Up to ${p.limit} employees</div><span class="original-price">${money(original)}/${annual ? "year" : "month"}</span><div class="amount"><span class="num">${money(discounted)}</span><small>/${annual ? "year" : "month"}</small></div><div class="note-line">${note}</div><a class="btn primary" href="mailto:hello@onyxhrms.com?subject=${encodeURIComponent("Enquiry about " + p.name)}">Choose ${p.name} →</a><h3 class="included-title">What's Included</h3><ul class="plan-features">${featureList}</ul></article>`;
           })
           .join("");
         document.querySelectorAll(".price-card").forEach((card) => {
