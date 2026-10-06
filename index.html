@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#f1f2f2">
+<meta name="theme-color" content="#ffffff">
 <meta name="description" content="Onyx HRMS is modern HRMS software for businesses in Pakistan, covering employees, payroll, leave, geo-fenced attendance and recruitment in one system.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Onyx HRMS — HR, built around your business">
@@ -237,6 +237,28 @@ h1,h2,.section-title{letter-spacing:-.025em}
 @media(max-width:600px){.orbit-modal{padding:25px 16px 17px}.orbit-modal h2{font-size:19px}.orbit-modal p{font-size:13px;margin-bottom:15px}}
 @media(prefers-reduced-motion:reduce){.orbit-card,.orbit-card::after,.orbit-name,.orbit-modal{transition:none}}
 </style>
+
+<style id="requested-white-sections-and-modules">
+/* White section surfaces; preserve existing colors on small controls and illustrations. */
+:root{--page:#fff;--canvas:#fff;--module-copy-surface:rgba(255,255,255,.96)}
+body,.page,.section,section,.trust-strip{background-color:var(--paper)}
+.hero{background-image:none}
+/* Restore the original comparison palette as an edge-to-edge section. */
+#comparison{padding:0;background:var(--ink);width:100%}
+#comparison .integration-panel{width:100%;border:0;border-radius:0;background:var(--ink);color:var(--paper)}
+#modules .audience-grid{grid-template-columns:repeat(3,minmax(0,1fr));align-items:stretch}
+#modules .module-card{grid-column:auto;position:relative;isolation:isolate;display:flex;flex-direction:column;background:var(--paper);overflow:hidden;min-width:0}
+#modules .module-card::before{content:"";position:absolute;inset:0;z-index:-1;background-image:var(--module-photo);background-size:cover;background-position:center;transform:scale(1);transition:transform .65s var(--ease)}
+#modules .module-card:hover::before,#modules .module-card:focus-within::before{transform:scale(1.09)}
+#modules .module-photo{height:215px;flex:0 0 215px;background:transparent}
+#modules .feature-copy{background:var(--module-copy-surface);flex:1;display:flex;flex-direction:column;align-items:flex-start}
+#modules .feature-copy p{margin-bottom:22px}
+#modules .module-read-more{margin-top:auto;border-color:var(--violet);color:var(--violet);background:var(--paper);min-height:44px}
+#modules .module-read-more:hover{background:var(--violet-soft)}
+@media(max-width:850px){#modules .audience-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){#modules .audience-grid{grid-template-columns:1fr}#modules .module-photo{height:185px;flex-basis:185px}}
+@media(prefers-reduced-motion:reduce){#modules .module-card::before{transition:none}#modules .module-card:hover::before,#modules .module-card:focus-within::before{transform:none}}
+</style>
 </head>
 <body>
 <a href="#main" class="skip">Skip to content</a>
@@ -253,11 +275,18 @@ h1,h2,.section-title{letter-spacing:-.025em}
 
 <section class="section audience" id="modules" aria-labelledby="modules-title"><header class="section-heading reveal"><span class="eyebrow">Modules</span><h2 class="section-title" id="modules-title">One platform.<br><em>Every module.</em></h2><p class="section-intro">People, attendance, leave, pay and hiring — connected in one adaptable system.</p></header>
 <div class="audience-grid">
-<article class="feature reveal"><div class="feature-visual blue-bg" aria-hidden="true"><div class="ring-diagram"><span>◎</span></div></div><div class="feature-copy"><span class="tag">Geo-fenced</span><h3>Biometric Attendance</h3><p>No biometric hardware required. Onyx turns every employee’s smartphone into a digital check-in terminal with instant attendance logging.</p></div></article>
-<article class="feature reveal"><div class="feature-visual violet-bg" aria-hidden="true"><div class="mini-app"><div class="mini-top"><i></i><i></i><i></i><span>People</span></div><div class="mini-row"><div class="mini-avatar"></div><div class="mini-bar"></div><div class="mini-bar short"></div></div><div class="mini-row"><div class="mini-avatar"></div><div class="mini-bar"></div><div class="mini-bar short"></div></div><div class="mini-row"><div class="mini-avatar"></div><div class="mini-bar"></div><div class="mini-bar short"></div></div></div></div><div class="feature-copy"><span class="tag">Employee records</span><h3>Connected People</h3><p>Keep profiles, roles, departments, documents and reporting lines together in one clear workspace.</p></div></article>
-<article class="feature reveal"><div class="feature-visual mint-bg" aria-hidden="true"><div class="paper-stack"><i></i><i></i><i></i><i></i></div></div><div class="feature-copy"><span class="tag">Time off</span><h3>Effortless Leave</h3><p>Manage requests, approvals, balances and calendars without losing sight of team availability.</p></div></article>
-<article class="feature wide reveal"><div class="feature-visual coral-bg" aria-hidden="true"><div class="mini-app"><div class="mini-top"><i></i><i></i><i></i><span>Payroll</span></div><div class="chart-bars"><i></i><i></i><i></i><i></i><i></i></div></div></div><div class="feature-copy"><span class="tag">Accurate processing</span><h3>Connected Payroll</h3><p>Bring attendance, adjustments, calculations and clear salary slips into one dependable workflow.</p></div></article>
-<article class="feature reveal"><div class="feature-visual yellow-bg" aria-hidden="true"><div class="team-bubbles"><span>✦</span><span>+</span><span>↗</span><span>●</span><span>♥</span></div></div><div class="feature-copy"><span class="tag">Build your team</span><h3>Smarter Recruitment</h3><p>Move candidates from opening to offer, then turn successful hires into employee profiles in one step.</p></div></article></div></section>
+<article class="feature module-card reveal" style="--module-photo:url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&amp;fit=crop&amp;w=1000&amp;q=85')"><div class="feature-visual module-photo" aria-hidden="true"></div><div class="feature-copy"><span class="tag">Geo-fenced</span><h3>Biometric Attendance</h3><p>No biometric hardware required. Onyx turns every employee’s smartphone into a digital check-in terminal with instant attendance logging.</p><a class="button module-read-more" href="https://onyxhrms.com/features/geo-fenced-biometric-attendance" target="_blank" rel="noopener noreferrer" aria-label="Read more about Biometric Attendance">Read More <span aria-hidden="true">↗</span></a></div></article>
+<article class="feature module-card reveal" style="--module-photo:url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&amp;fit=crop&amp;w=1000&amp;q=85')"><div class="feature-visual module-photo" aria-hidden="true"></div><div class="feature-copy"><span class="tag">Employee records</span><h3>Connected People</h3><p>Keep profiles, roles, departments, documents and reporting lines together in one clear workspace.</p><a class="button module-read-more" href="https://onyxhrms.com/features/employee-management" target="_blank" rel="noopener noreferrer" aria-label="Read more about Connected People">Read More <span aria-hidden="true">↗</span></a></div></article>
+<article class="feature module-card reveal" style="--module-photo:url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&amp;fit=crop&amp;w=1000&amp;q=85')"><div class="feature-visual module-photo" aria-hidden="true"></div><div class="feature-copy"><span class="tag">Time off</span><h3>Effortless Leave</h3><p>Manage requests, approvals, balances and calendars without losing sight of team availability.</p><a class="button module-read-more" href="https://onyxhrms.com/features/leave-management" target="_blank" rel="noopener noreferrer" aria-label="Read more about Effortless Leave">Read More <span aria-hidden="true">↗</span></a></div></article>
+<article class="feature module-card reveal" style="--module-photo:url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&amp;fit=crop&amp;w=1000&amp;q=85')"><div class="feature-visual module-photo" aria-hidden="true"></div><div class="feature-copy"><span class="tag">Accurate processing</span><h3>Connected Payroll</h3><p>Bring attendance, adjustments, calculations and clear salary slips into one dependable workflow.</p><a class="button module-read-more" href="https://onyxhrms.com/features/payroll-automation" target="_blank" rel="noopener noreferrer" aria-label="Read more about Connected Payroll">Read More <span aria-hidden="true">↗</span></a></div></article>
+<article class="feature module-card reveal" style="--module-photo:url('https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&amp;fit=crop&amp;w=1000&amp;q=85')"><div class="feature-visual module-photo" aria-hidden="true"></div><div class="feature-copy"><span class="tag">Build your team</span><h3>Smarter Recruitment</h3><p>Move candidates from opening to offer, then turn successful hires into employee profiles in one step.</p><a class="button module-read-more" href="https://onyxhrms.com/features/recruitment-management" target="_blank" rel="noopener noreferrer" aria-label="Read more about Smarter Recruitment">Read More <span aria-hidden="true">↗</span></a></div></article>
+<article class="feature module-card reveal" style="--module-photo:url('https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&amp;fit=crop&amp;w=1000&amp;q=85')"><div class="feature-visual module-photo" aria-hidden="true"></div><div class="feature-copy"><span class="tag">Workforce scheduling</span><h3>Shift Management</h3><p>Plan shifts, organize rosters and keep teams aligned with their working schedules.</p><a class="button module-read-more" href="https://onyxhrms.com/features/shift-management" target="_blank" rel="noopener noreferrer" aria-label="Read more about Shift Management">Read More <span aria-hidden="true">↗</span></a></div></article>
+<article class="feature module-card reveal" style="--module-photo:url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&amp;fit=crop&amp;w=1000&amp;q=85')"><div class="feature-visual module-photo" aria-hidden="true"></div><div class="feature-copy"><span class="tag">Clear pay records</span><h3>Salary Slips</h3><p>Give employees clear salary slips with earnings, deductions and net pay in one place.</p><a class="button module-read-more" href="https://onyxhrms.com/features/salary-slips" target="_blank" rel="noopener noreferrer" aria-label="Read more about Salary Slips">Read More <span aria-hidden="true">↗</span></a></div></article>
+<article class="feature module-card reveal" style="--module-photo:url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&amp;fit=crop&amp;w=1000&amp;q=85')"><div class="feature-visual module-photo" aria-hidden="true"></div><div class="feature-copy"><span class="tag">Organized documents</span><h3>File Management</h3><p>Keep employee files and HR documents organized and easy to find.</p><a class="button module-read-more" href="https://onyxhrms.com/features/file-management" target="_blank" rel="noopener noreferrer" aria-label="Read more about File Management">Read More <span aria-hidden="true">↗</span></a></div></article>
+<article class="feature module-card reveal" style="--module-photo:url('https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&amp;fit=crop&amp;w=1000&amp;q=85')"><div class="feature-visual module-photo" aria-hidden="true"></div><div class="feature-copy"><span class="tag">HR paperwork</span><h3>Document Generation</h3><p>Prepare consistent HR letters and documents using your employee information.</p><a class="button module-read-more" href="https://onyxhrms.com/features/document-generation" target="_blank" rel="noopener noreferrer" aria-label="Read more about Document Generation">Read More <span aria-hidden="true">↗</span></a></div></article>
+<article class="feature module-card reveal" style="--module-photo:url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&amp;fit=crop&amp;w=1000&amp;q=85')"><div class="feature-visual module-photo" aria-hidden="true"></div><div class="feature-copy"><span class="tag">Workforce insights</span><h3>Reports</h3><p>Review people, attendance and payroll information through clear HR reports.</p><a class="button module-read-more" href="https://onyxhrms.com/features/reports" target="_blank" rel="noopener noreferrer" aria-label="Read more about Reports">Read More <span aria-hidden="true">↗</span></a></div></article>
+<article class="feature module-card reveal" style="--module-photo:url('https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?auto=format&amp;fit=crop&amp;w=1000&amp;q=85')"><div class="feature-visual module-photo" aria-hidden="true"></div><div class="feature-copy"><span class="tag">Daily coordination</span><h3>Task Management</h3><p>Assign responsibilities, follow progress and keep team tasks organized.</p><a class="button module-read-more" href="https://onyxhrms.com/features/task-management" target="_blank" rel="noopener noreferrer" aria-label="Read more about Task Management">Read More <span aria-hidden="true">↗</span></a></div></article>
+<article class="feature module-card reveal" style="--module-photo:url('https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&amp;fit=crop&amp;w=1000&amp;q=85')"><div class="feature-visual module-photo" aria-hidden="true"></div><div class="feature-copy"><span class="tag">Employee self-service</span><h3>Employee Portal</h3><p>Give employees a dedicated place to access their records, leave requests and salary information.</p><a class="button module-read-more" href="https://onyxhrms.com/features/employee-portal" target="_blank" rel="noopener noreferrer" aria-label="Read more about Employee Portal">Read More <span aria-hidden="true">↗</span></a></div></article></div></section>
 
 <section class="section security" id="security" aria-labelledby="security-title"><div class="security-grid"><div class="reveal"><span class="eyebrow">Security at every layer</span><h2 class="section-title" id="security-title">Your people data stays <em>protected.</em></h2><p class="section-intro">Onyx is designed around controlled access, accountable actions and responsible data handling.</p><details class="expand-copy"><summary>Read More</summary><div>Role-based permissions help ensure people only see what they need. Sensitive records can be restricted, important actions remain traceable, and access can be updated as responsibilities change. Security controls are applied across employee records, attendance, payroll and documents.</div></details></div>
 <div class="security-points reveal"><div><i>⊙</i><strong>Role-based access</strong>Permissions aligned to responsibilities.</div><div><i>◉</i><strong>Activity visibility</strong>Important actions remain accountable.</div><div><i>▣</i><strong>Protected records</strong>Sensitive employee data stays controlled.</div><div><i>↻</i><strong>Responsible access</strong>Access can change as your team does.</div></div></div></section>  
@@ -269,7 +298,7 @@ h1,h2,.section-title{letter-spacing:-.025em}
 
  
    
-<section class="section integrations" id="comparison" aria-labelledby="comparison-title"><div class="integration-panel reveal"><span class="eyebrow">Industry comparison</span><h2 class="section-title" id="comparison-title">Save up to <span id="industrySavePct">83%</span></h2><p class="section-intro">Onyx next to industry HR software.</p><div class="integration-selector" id="industryRows" role="group" aria-label="Compare by team size"></div><div class="integration-label compare-label" aria-live="polite"><strong id="compareName"></strong><span class="compare-flow" id="compareFlow"></span></div><p class="comparison-sources">Based on publicly listed prices from other Pakistani HR software providers, checked 24 September 2026.</p></div></section>
+<section class="section integrations" id="comparison" aria-labelledby="comparison-title"><div class="integration-panel reveal"><span class="eyebrow">Industry comparison</span><h2 class="section-title" id="comparison-title">Save up to <span id="industrySavePct">83%</span></h2><p class="section-intro">Onyx next to industry HR software.</p><div class="integration-selector" id="industryRows" role="group" aria-label="Compare by team size"><button type="button" class="integration-option tier" aria-pressed="true" aria-label="100 employees">100</button><button type="button" class="integration-option tier" aria-pressed="false" aria-label="200 employees">200</button><button type="button" class="integration-option tier" aria-pressed="false" aria-label="300 employees">300</button><button type="button" class="integration-option tier" aria-pressed="false" aria-label="500 employees">500</button></div><div class="integration-label compare-label" aria-live="polite"><strong id="compareName">100 employees · 69% savings</strong><span class="compare-flow" id="compareFlow"><span>Industry <s>PKR 18,000</s></span><span aria-hidden="true">→</span><span>Onyx <b>PKR 5,499</b> /mo</span><i>Core</i></span></div><p class="comparison-sources">Based on publicly listed prices from other Pakistani HR software providers, checked 24 September 2026.</p></div></section>
 
 
 <section class="section setup" id="setup" aria-labelledby="setup-title"><header class="section-heading reveal"><span class="eyebrow">Getting started</span><h2 class="section-title" id="setup-title">From setup to<br><em>ready to run.</em></h2><p class="section-intro">A guided onboarding path shaped around your workforce, policies and priorities.</p></header><div class="setup-track"><article class="setup-step reveal"><span class="step-num">01</span><h3>Discover</h3><p>We map your team structure, rules and current workflows.</p></article><article class="setup-step reveal"><span class="step-num">02</span><h3>Configure</h3><p>Your workspace, permissions, policies and payroll are tailored.</p></article><article class="setup-step reveal"><span class="step-num">03</span><h3>Bring your data</h3><p>Employee records are prepared and moved into Onyx.</p></article><article class="setup-step reveal"><span class="step-num">04</span><h3>Launch together</h3><p>Your team gets guided support as Onyx goes live.</p></article></div></section>
@@ -284,7 +313,7 @@ h1,h2,.section-title{letter-spacing:-.025em}
 const motion=window.matchMedia('(prefers-reduced-motion: reduce)');if(!motion.matches)document.body.classList.add('motion');
 const reveals=document.querySelectorAll('.reveal');if('IntersectionObserver'in window&&!motion.matches){const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('in-view');observer.unobserve(entry.target)}})},{threshold:.08,rootMargin:'0px 0px -5% 0px'});reveals.forEach(el=>observer.observe(el))}else reveals.forEach(el=>el.classList.add('in-view'));
 const menuButton=document.querySelector('.menu-toggle'),menu=document.querySelector('.mobile-menu');function closeMenu(){menu.dataset.open='false';menuButton.setAttribute('aria-expanded','false');menuButton.setAttribute('aria-label','Open menu')}menuButton.addEventListener('click',()=>{const open=menu.dataset.open!=='true';menu.dataset.open=String(open);menuButton.setAttribute('aria-expanded',String(open));menuButton.setAttribute('aria-label',open?'Close menu':'Open menu')});menu.querySelectorAll('a').forEach(link=>link.addEventListener('click',closeMenu));document.addEventListener('click',e=>{if(!e.target.closest('.nav-shell'))closeMenu()});
-const testimonials=[...document.querySelectorAll('.testimonial-card')],count=document.querySelector('.slide-count');let active=0;function showTestimonial(index){active=(index+testimonials.length)%testimonials.length;testimonials.forEach((card,i)=>{card.dataset.state=i===active?'active':i===(active+1)%testimonials.length?'next':'previous';card.setAttribute('aria-hidden',String(i!==active))});count.textContent=`${String(active+1).padStart(2,'0')} / ${String(testimonials.length).padStart(2,'0')}`}document.getElementById('prev').addEventListener('click',()=>showTestimonial(active-1));document.getElementById('next').addEventListener('click',()=>showTestimonial(active+1));
+const testimonials=[...document.querySelectorAll('.testimonial-card')],count=document.querySelector('.slide-count');let active=0;function showTestimonial(index){active=(index+testimonials.length)%testimonials.length;testimonials.forEach((card,i)=>{card.dataset.state=i===active?'active':i===(active+1)%testimonials.length?'next':'previous';card.setAttribute('aria-hidden',String(i!==active))});count.textContent=`${String(active+1).padStart(2,'0')} / ${String(testimonials.length).padStart(2,'0')}`}const prev=document.getElementById('prev'),next=document.getElementById('next');if(prev&&next&&count&&testimonials.length){prev.addEventListener('click',()=>showTestimonial(active-1));next.addEventListener('click',()=>showTestimonial(active+1));}
 const hero=document.querySelector('.hero');if('IntersectionObserver'in window){const heroObserver=new IntersectionObserver(entries=>document.body.classList.toggle('paused',!entries[0].isIntersecting||document.hidden));heroObserver.observe(hero)}document.addEventListener('visibilitychange',()=>document.body.classList.toggle('paused',document.hidden||hero.getBoundingClientRect().bottom<0));document.getElementById('year').textContent=new Date().getFullYear();
 })();
 </script>
@@ -2878,7 +2907,7 @@ billing: `<p><strong>Last Updated:</strong> 9/26/2026</p>
           }),
       );
       renderPrices();
-      render();
+      if ($("#demoView") && $("#demoTabs") && $("#demoTitle") && $("#demoSubtitle")) render();
       // ===== BELL INIT =====
       updateBell();
       var bellBtn = $("#bellBtn");
@@ -2886,18 +2915,7 @@ billing: `<p><strong>Last Updated:</strong> 9/26/2026</p>
         bellBtn.onclick = function(e) { e.stopPropagation(); var panel = $("#bellPanel"); if (panel) { panel.hidden = !panel.hidden; if (!panel.hidden) renderBellPanel(); } };
         document.addEventListener("click", function(e) { var panel = $("#bellPanel"); if (panel && !panel.hidden && !e.target.closest(".bell-wrap")) panel.hidden = true; });
       }
-      (function(){
-        const tiers=[100,200,300,500];
-        const other=(c)=>c<=100?18000:c<=200?66000:144000;
-        const onyxFor=(c)=>prices.find((p)=>c<=p.limit)||prices[prices.length-1];
-        const wrap=$("#industryRows");let max=0;
-        const data=tiers.map((c)=>{const o=other(c),p=onyxFor(c),pct=Math.round(Math.max(0,o-p.monthly)/o*100);if(pct>max)max=pct;return {c,o,p,pct};});
-        $("#industrySavePct").textContent=max+"%";
-        wrap.innerHTML=data.map((d,i)=>`<button type="button" class="integration-option tier" aria-pressed="${i===0}" aria-label="${d.c} employees">${d.c}</button>`).join("");
-        const btns=[...wrap.querySelectorAll("button")];
-        function pick(i){const d=data[i];btns.forEach((b,j)=>b.setAttribute("aria-pressed",String(j===i)));$("#compareName").textContent=`${d.c} employees · ${d.pct}% savings`;$("#compareFlow").innerHTML=`<span>Industry <s>${money(d.o)}</s></span><span aria-hidden="true">→</span><span>Onyx <b>${money(d.p.monthly)}</b> /mo</span><i>${d.p.name}</i>`;}
-        btns.forEach((b,i)=>b.addEventListener("click",()=>pick(i)));pick(0);
-      })();
+
 </script>
 <script>(()=>{const dds=[...document.querySelectorAll('.nav .dd')];const close=x=>dds.forEach(d=>{if(d!==x){d.classList.remove('open');d.querySelector('.dd-btn').setAttribute('aria-expanded','false')}});dds.forEach(d=>{const b=d.querySelector('.dd-btn');b.addEventListener('click',e=>{e.stopPropagation();const o=!d.classList.contains('open');close(d);d.classList.toggle('open',o);b.setAttribute('aria-expanded',String(o))});d.addEventListener('mouseenter',()=>{if(matchMedia('(hover:hover)').matches){close(d);d.classList.add('open');b.setAttribute('aria-expanded','true')}});d.addEventListener('mouseleave',()=>{if(matchMedia('(hover:hover)').matches){d.classList.remove('open');b.setAttribute('aria-expanded','false')}});d.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>close()))});document.addEventListener('click',e=>{if(!e.target.closest('.dd'))close()});document.addEventListener('keydown',e=>{if(e.key==='Escape')close()})})();</script>
 <script id="onyx-orbit-animation">
@@ -3070,5 +3088,22 @@ function frame(now){if(last){const dt=Math.min(now-last,64);if(!document.hidden&
 media.addEventListener('change',()=>{if(media.matches){completed=true;state.phase='orbit'} });
 paint();requestAnimationFrame(frame);
 })();
+</script>
+<script id="onyx-industry-comparison">
+      (function(){
+        const $=(selector)=>document.querySelector(selector);
+        const money=(n)=>"PKR "+Math.round(n).toLocaleString("en-PK");
+        const prices=[{name:"Core",limit:100,monthly:5499},{name:"Team",limit:200,monthly:8999},{name:"Business",limit:300,monthly:12499},{name:"Enterprise",limit:500,monthly:17499}];
+        const tiers=[100,200,300,500];
+        const other=(c)=>c<=100?18000:c<=200?66000:144000;
+        const onyxFor=(c)=>prices.find((p)=>c<=p.limit)||prices[prices.length-1];
+        const wrap=$("#industryRows");let max=0;
+        const data=tiers.map((c)=>{const o=other(c),p=onyxFor(c),pct=Math.round(Math.max(0,o-p.monthly)/o*100);if(pct>max)max=pct;return {c,o,p,pct};});
+        $("#industrySavePct").textContent=max+"%";
+        wrap.innerHTML=data.map((d,i)=>`<button type="button" class="integration-option tier" aria-pressed="${i===0}" aria-label="${d.c} employees">${d.c}</button>`).join("");
+        const btns=[...wrap.querySelectorAll("button")];
+        function pick(i){const d=data[i];btns.forEach((b,j)=>b.setAttribute("aria-pressed",String(j===i)));$("#compareName").textContent=`${d.c} employees · ${d.pct}% savings`;$("#compareFlow").innerHTML=`<span>Industry <s>${money(d.o)}</s></span><span aria-hidden="true">→</span><span>Onyx <b>${money(d.p.monthly)}</b> /mo</span><i>${d.p.name}</i>`;}
+        btns.forEach((b,i)=>b.addEventListener("click",()=>pick(i)));pick(0);
+      })();
 </script>
 </body></html>
