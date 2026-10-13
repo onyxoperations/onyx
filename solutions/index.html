@@ -1,0 +1,1070 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#ffffff">
+<meta name="description" content="Explore how Onyx HRMS supports corporates, SMEs, call centers, BPOs, marketing agencies, retail, hotels and other workforce environments.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Onyx HRMS — Solutions by Industry">
+<meta property="og:description" content="Discover detailed industry applications for Onyx employee management, attendance, shifts, leave, payroll and hiring.">
+<meta name="twitter:card" content="summary_large_image">
+<title>Solutions by Industry · Onyx HRMS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap"><link rel="icon" type="image/png" href="https://raw.githubusercontent.com/onyxoperations/onyx/refs/heads/main/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/svg+xml" href="https://raw.githubusercontent.com/onyxoperations/onyx/afccd7c52228b2b9cbc5d000926eb10b1a04c7ee/favicon.svg">
+<style>
+
+/* ===== CoreShift-inspired: sharp type, clean spacing, restrained accent ===== */
+:root{
+  --bg:#fff;
+  --surface:#ffffff;
+  --ink:#120c24;
+  --ink-soft:#4a4b50;
+  --muted:#696c75;
+  --faint:#9a9ca3;
+  --line:#dedfe2;
+  --line-strong:#d4d4cf;
+  --accent:#6c01f4;
+  --accent-soft:#efe6ff;
+  --ease:cubic-bezier(.22,1,.36,1);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:96px;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"IBM Plex Sans",system-ui,-apple-system,sans-serif;font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer;background:none;border:0;color:inherit}
+img,svg{display:block;max-width:100%}
+::selection{background:var(--ink);color:var(--bg)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+.skip{position:fixed;left:16px;top:-80px;z-index:200;background:var(--ink);color:var(--bg);padding:12px 18px;font-size:13px;border-radius:8px;z-index:300}
+.skip:focus{top:16px}
+
+/* type scale */
+.display{font-family:"Sora",sans-serif;font-weight:500;letter-spacing:-.035em;line-height:1.02}
+.eyebrow{font-family:"Sora",sans-serif;font-size:12px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.eyebrow .dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--accent);margin-right:9px;vertical-align:middle;transform:translateY(-1px)}
+.lead{font-size:clamp(17px,1.5vw,20px);line-height:1.55;color:var(--ink-soft);font-weight:450}
+.body{font-size:16px;line-height:1.7;color:var(--ink-soft)}
+.mono{font-family:"Sora",sans-serif;font-feature-settings:"tnum";font-weight:500}
+
+/* layout */
+.wrap{max-width:1180px;margin:0 auto;padding:0 32px}
+.rule{height:1px;background:var(--line);border:0;margin:0}
+
+/* ===== Hero: editorial, left-aligned, confident ===== */
+.hero{padding:88px 0 96px;position:relative}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:72px;align-items:center}
+.hero-kicker{margin-bottom:28px}
+.hero h1{font-size:clamp(48px,7vw,104px);margin:0 0 22px;font-weight:500}
+.hero h1 .accent{color:var(--accent)}
+.hero-role{font-family:"Sora",sans-serif;font-size:clamp(15px,1.4vw,18px);font-weight:500;color:var(--ink);margin:0 0 26px;letter-spacing:-.01em}
+.hero-role .sep{color:var(--faint);margin:0 10px;font-weight:400}
+.hero-role .arch{color:var(--accent)}
+.hero-lead{max-width:480px;margin:0 0 36px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+.hero-meta{display:flex;gap:36px;margin-top:48px;padding-top:28px;border-top:1px solid var(--line);flex-wrap:wrap}
+.hero-meta dt{font-family:"Sora",sans-serif;font-size:11px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);margin-bottom:6px}
+.hero-meta dd{margin:0;font-size:14px;font-weight:500;color:var(--ink)}
+
+/* portrait — clean, intentional, no glow/tilt */
+.portrait{position:relative}
+.portrait-frame{position:relative;aspect-ratio:4/5;background:var(--ink);border-radius:4px;overflow:hidden}
+.portrait-frame img{width:100%;height:100%;object-fit:cover;display:block}
+.portrait-frame .tag{position:absolute;top:16px;left:16px;font-family:"Sora",sans-serif;font-size:10px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:#fff;background:rgba(14,14,16,.55);padding:6px 10px;border-radius:4px;backdrop-filter:blur(6px);z-index:3}
+.portrait-cap{display:flex;justify-content:space-between;align-items:baseline;margin-top:16px;gap:16px}
+.portrait-cap .name{font-family:"Sora",sans-serif;font-size:15px;font-weight:600;letter-spacing:-.01em}
+.portrait-cap .name small{display:block;font-weight:400;color:var(--muted);font-size:13px;margin-top:3px;letter-spacing:0}
+
+/* ===== Section primitives ===== */
+.section{padding:104px 0;border-top:1px solid var(--line)}
+.section-head{max-width:680px;margin-bottom:64px}
+.section-head .eyebrow{margin-bottom:22px}
+.section-head h2{font-size:clamp(34px,4.4vw,56px);margin:0;font-weight:500;line-height:1.05}
+.section-head p{margin:22px 0 0;max-width:540px}
+
+/* ===== Story: editorial single column ===== */
+.story{padding:104px 0}
+.story-grid{display:grid;grid-template-columns:200px 1fr;gap:48px;max-width:920px}
+.story-label{font-family:"Sora",sans-serif;font-size:12px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);position:sticky;top:96px;align-self:start}
+.story-body p{font-size:clamp(17px,1.5vw,21px);line-height:1.6;color:var(--ink-soft);margin:0 0 26px;font-weight:450}
+.story-body p:first-child{color:var(--ink);font-weight:500}
+.story-body .pull{font-family:"Sora",sans-serif;font-size:clamp(22px,2.4vw,30px);line-height:1.3;letter-spacing:-.02em;color:var(--ink);font-weight:500;border-left:2px solid var(--accent);padding-left:22px;margin:36px 0}
+.story-sig{margin-top:40px;padding-top:24px;border-top:1px solid var(--line)}
+.story-sig .n{font-family:"Sora",sans-serif;font-size:18px;font-weight:600;letter-spacing:-.01em}
+.story-sig .r{font-size:13px;color:var(--muted);margin-top:4px}
+
+/* ===== Build: clean structured list ===== */
+.build-list{border-top:1px solid var(--line-strong)}
+.build-row{display:grid;grid-template-columns:60px 1fr 1.4fr;gap:32px;padding:32px 0;border-bottom:1px solid var(--line);align-items:start;transition:background .25s var(--ease)}
+.build-row:hover{background:var(--surface)}
+.build-row .num{font-family:"Sora",sans-serif;font-size:13px;font-weight:500;color:var(--faint);letter-spacing:.05em;padding-top:4px}
+.build-row h3{font-family:"Sora",sans-serif;font-size:22px;font-weight:600;letter-spacing:-.02em;margin:0 0 8px;line-height:1.2}
+.build-row p{font-size:15px;line-height:1.6;color:var(--muted);margin:0;max-width:460px}
+
+/* ===== Principles: numbered editorial ===== */
+.principles-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid var(--line-strong)}
+.principle{padding:40px 32px 40px 0;border-bottom:1px solid var(--line)}
+.principle:nth-child(odd){border-right:1px solid var(--line);padding-right:40px}
+.principle:nth-child(even){padding-left:40px}
+.principle .pnum{font-family:"Sora",sans-serif;font-size:13px;font-weight:500;color:var(--accent);margin-bottom:16px;letter-spacing:.05em}
+.principle h3{font-family:"Sora",sans-serif;font-size:20px;font-weight:600;letter-spacing:-.02em;margin:0 0 10px}
+.principle p{font-size:15px;line-height:1.6;color:var(--muted);margin:0;max-width:420px}
+
+/* ===== Journey: minimal timeline ===== */
+.timeline{max-width:760px}
+.tl{display:grid;grid-template-columns:140px 1fr;gap:32px;padding:28px 0;border-top:1px solid var(--line)}
+.tl:first-child{border-top:1px solid var(--line-strong)}
+.tl .when{font-family:"Sora",sans-serif;font-size:13px;font-weight:500;color:var(--accent);letter-spacing:.04em;padding-top:4px}
+.tl h3{font-family:"Sora",sans-serif;font-size:21px;font-weight:600;letter-spacing:-.02em;margin:0 0 8px}
+.tl p{font-size:15px;line-height:1.65;color:var(--muted);margin:0;max-width:520px}
+
+/* ===== Stats: quiet, precise ===== */
+.stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;border-top:1px solid var(--line-strong);padding-top:48px}
+.stat .n{font-family:"Sora",sans-serif;font-size:clamp(40px,5vw,64px);font-weight:500;letter-spacing:-.04em;line-height:1;color:var(--ink)}
+.stat .n .plus{color:var(--accent)}
+.stat .l{font-size:13px;color:var(--muted);margin-top:14px;line-height:1.5;max-width:200px}
+
+/* ===== Vision quote: lots of space ===== */
+.vision{padding:128px 0;text-align:center}
+.vision .quote{font-family:"Sora",sans-serif;font-size:clamp(28px,4vw,52px);line-height:1.18;letter-spacing:-.03em;font-weight:500;max-width:900px;margin:0 auto;color:var(--ink)}
+.vision .quote .mark{color:var(--accent)}
+.vision .attrib{margin-top:36px;font-family:"Sora",sans-serif;font-size:14px;font-weight:500;color:var(--muted);letter-spacing:.02em}
+.vision .attrib b{color:var(--ink);font-weight:600}
+
+/* ===== CTA: clean bordered ===== */
+.cta{padding:104px 0}
+.cta-box{border:1px solid var(--line-strong);border-radius:12px;padding:64px 48px;display:flex;justify-content:space-between;align-items:center;gap:40px;flex-wrap:wrap;background:var(--surface)}
+.cta-box h2{font-family:"Sora",sans-serif;font-size:clamp(26px,3vw,38px);font-weight:500;letter-spacing:-.025em;margin:0;line-height:1.1;max-width:560px}
+.cta-box h2 .accent{color:var(--accent)}
+.cta-actions{display:flex;gap:12px;flex-wrap:wrap}
+
+/* ===== Reveal (subtle only) ===== */
+.reveal{opacity:0;transform:translateY(14px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+.reveal.d1{transition-delay:.06s}.reveal.d2{transition-delay:.12s}.reveal.d3{transition-delay:.18s}.reveal.d4{transition-delay:.24s}
+
+/* ===== Responsive ===== */
+@media(max-width:960px){
+  .hero-grid{grid-template-columns:1fr;gap:56px}
+  .portrait{max-width:420px}
+  .story-grid{grid-template-columns:1fr;gap:20px}
+  .story-label{position:static}
+  .build-row{grid-template-columns:48px 1fr;gap:16px 20px}
+  .build-row p{grid-column:2}
+  .principles-grid{grid-template-columns:1fr}
+  .principle{padding:32px 0!important;border-right:0!important;padding-left:0!important}
+  .principle:nth-child(odd){border-right:0}
+  .stats-row{grid-template-columns:repeat(2,1fr);gap:32px 24px}
+}
+@media(max-width:640px){
+  .wrap,
+  .hero{padding:56px 0 72px}
+  .section,.story,.cta{padding:72px 0}
+  .vision{padding:88px 0}
+  .hero-meta{gap:24px}
+  .tl{grid-template-columns:1fr;gap:8px}
+  .tl .when{padding-top:0}
+  .cta-box{padding:40px 28px}
+  .cta-box{flex-direction:column;align-items:flex-start}
+  .stats-row{grid-template-columns:1fr 1fr}
+  .portrait-frame .mono{font-size:84px}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .reveal{opacity:1;transform:none;transition:none}
+  *{transition-duration:.001ms!important;animation-duration:.001ms!important}
+}
+
+:root{--page:#e8e9e9;--paper:#fff;--canvas:#f3f4f5;--ink:#120c24;--muted:#696c75;--line:#dedfe2;--violet:#6c01f4;--violet-soft:#efe6ff;--coral:#f87548;--cyan:#8be7ed;--yellow:#ffe27a;--mint:#d8f6dc;--shadow:0 20px 55px rgba(24,24,30,.09);--ease:cubic-bezier(.22,1,.36,1)}
+.skip{position:absolute;left:16px;top:-80px;z-index:200;background:var(--ink);color:var(--paper);padding:13px 20px}
+.skip:focus{top:16px}
+.site{max-width:1600px;margin:0 auto;padding:24px 24px 0}
+.page{background:var(--canvas);overflow:clip;border-radius:18px 18px 0 0}
+.nav-shell{position:sticky;top:15px;z-index:100;width:min(100% - 40px,960px);margin:0 auto -75px;padding-top:22px;pointer-events:none}
+.nav{height:64px;display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:27px;background:rgba(255,255,255,.94);border:1px solid rgba(23,23,25,.1);box-shadow:0 12px 35px rgba(20,20,30,.1);border-radius:13px;padding:7px 8px 7px 21px;backdrop-filter:blur(16px);pointer-events:auto}
+.logo{display:inline-flex;align-items:center;gap:9px;font-weight:900;font-size:20px;white-space:nowrap;letter-spacing:0}
+.brand-mark{display:grid;place-items:center;width:27px;height:27px;color:var(--paper);background:var(--ink);border-radius:8px;transform:rotate(-13deg)}
+.brand-mark svg{width:18px;transform:rotate(13deg)}
+.links{display:flex;align-items:center;justify-content:center;gap:clamp(14px,2.3vw,32px)}
+.links a{font-size:13px;font-weight:700;color:#4a4b50;transition:color .2s}
+.links a:hover{color:var(--violet)}
+.actions{display:flex;align-items:center;gap:8px}
+.button{min-height:44px;border:1px solid var(--line);background:var(--paper);color:var(--ink);padding:0 17px;display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:9px;font-size:13px;font-weight:800;line-height:1.1;transition:transform .28s var(--ease),box-shadow .28s var(--ease),background .2s}
+.button:hover{transform:translateY(-3px);box-shadow:0 10px 22px rgba(20,20,30,.12)}
+.button:active{transform:translateY(0)}
+.button.dark{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+.button.coral{background:var(--coral);border-color:var(--coral);color:var(--paper);min-width:202px}
+.button.violet{background:var(--violet);border-color:var(--violet);color:var(--paper)}
+.button svg{width:16px;height:16px}
+.menu-toggle{display:none;width:44px;height:44px;padding:0;align-items:center;justify-content:center;background:var(--paper);border:1px solid var(--line);border-radius:9px}
+.menu-toggle svg{width:20px}
+.mobile-menu{display:none;pointer-events:auto}
+.core .button{min-width:180px}
+.footer{background:var(--canvas);padding:85px 6% 0;overflow:hidden}
+.footer-top{display:grid;grid-template-columns:minmax(230px,2fr) repeat(3,minmax(110px,1fr));gap:45px;border-bottom:1px solid var(--line);padding-bottom:75px}
+.footer-description{max-width:315px;font-size:18px;line-height:1.45;font-weight:700;margin:24px 0 0}
+.footer-col strong{display:block;font-size:13px;margin-bottom:19px}
+.footer-col a{display:block;width:max-content;max-width:100%;font-size:13px;color:var(--muted);margin-bottom:13px}
+.footer-col a:hover{text-decoration:underline;color:var(--violet)}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;gap:18px;padding:23px 0;color:var(--muted);font-size:12px}
+.footer-wordmark{font-size:clamp(90px,17vw,280px);line-height:.73;letter-spacing:-.09em;font-weight:900;white-space:nowrap;text-align:center;margin:30px 0 -12px;color:var(--ink);transform:translateX(-.04em);user-select:none}
+.dialog .button{width:100%}
+@media(max-width:850px){.site{padding:0}
+.page{border-radius:0}
+.nav-shell{width:min(100% - 28px,720px);top:10px;padding-top:10px;margin-bottom:-62px}
+.nav{height:58px;gap:10px;padding-left:15px}
+.links,.actions .sign-in{display:none}
+.actions{justify-content:end}
+.menu-toggle{display:flex}
+.mobile-menu{position:absolute;top:75px;left:0;right:0;background:var(--paper);border:1px solid var(--line);border-radius:11px;box-shadow:var(--shadow);padding:9px}
+.mobile-menu[data-open="true"]{display:block}
+.mobile-menu a{display:block;padding:14px 16px;border-radius:7px;font-size:14px;font-weight:800}
+.mobile-menu a:hover{background:var(--canvas)}
+.footer-top{grid-template-columns:repeat(3,minmax(0,1fr))}
+.footer-about{grid-column:1/-1}
+.footer-description{max-width:480px}}
+@media(max-width:600px){.nav-shell{width:calc(100% - 24px)}
+.nav{padding:6px 6px 6px 12px}
+.logo{font-size:17px;gap:6px}
+.brand-mark{width:25px;height:25px}
+.actions .button.dark{min-height:42px;padding:0 11px;font-size:11px}
+.menu-toggle{width:42px;height:42px}
+.footer{padding:70px 22px 0}
+.footer-top{grid-template-columns:repeat(2,minmax(0,1fr));gap:35px 20px;padding-bottom:40px}
+.footer-about{grid-column:1/-1}
+.footer-bottom{font-size:11px;flex-wrap:wrap}
+.footer-wordmark{font-size:clamp(69px,17vw,110px);margin-top:24px}}
+@media(max-width:360px){.logo{font-size:15px}
+.actions .button.dark{font-size:10px;padding:0 8px}
+.nav{gap:5px}}
+@media(prefers-reduced-motion:reduce){.button{transition:none!important}}
+:root{--surface:var(--paper);--bg:var(--canvas);--ink-2:#4a4b50;--muted-2:#9a9ca3;--line-2:#eceef0;--g1:var(--violet);--g2:var(--coral);--gradient:linear-gradient(110deg,#6c01f4,#c41fd8 52%,#f87548);--gradient-soft:var(--violet-soft)}
+.demo-side .logo{font-size:18px;padding:0 10px 18px}
+.demo-side .brand-mark{width:24px;height:24px}
+.demo-side .brand-mark svg{width:15px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border-radius:9px;border:1px solid var(--line);background:var(--paper);color:var(--ink);padding:0 17px;min-height:44px;font-size:13px;font-weight:800;line-height:1.2;text-align:center;max-width:100%;transition:transform .28s var(--ease),box-shadow .28s var(--ease),background .2s}
+.btn:hover{transform:translateY(-3px);box-shadow:0 10px 22px rgba(20,20,30,.12)}
+.btn.primary{background:var(--violet);border-color:var(--violet);color:var(--paper)}
+.btn.small{min-height:36px;padding:0 13px;font-size:12px}
+.btn.active{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+.modal-back{position:fixed;inset:0;z-index:200;background:rgba(10,10,14,.65);padding:20px;display:grid;place-items:center;overflow-y:auto;animation:fadeIn .25s ease}
+@keyframes fadeIn{from{opacity:0}}
+.modal-box{position:relative;background:var(--paper);border-radius:12px;width:min(680px,100%);max-height:calc(100dvh - 40px);overflow-y:auto;padding:39px;box-shadow:0 30px 90px rgba(0,0,0,.2);animation:modalIn .4s var(--ease)}
+@keyframes modalIn{from{opacity:0;transform:translate3d(0,24px,0) scale(.98)}}
+.modal-box h2{font-size:31px;line-height:1.08;letter-spacing:-.04em;margin:0 44px 15px 0;font-weight:900}
+.modal-box h3{font-size:17px;margin:22px 0 8px;font-weight:900}
+.modal-box p,.modal-box li{font-size:14px;color:var(--ink-2);line-height:1.6}
+.modal-box a{color:var(--violet)}
+.modal-close{position:absolute;right:14px;top:14px;width:38px;height:38px;display:grid;place-items:center;background:var(--canvas);border:1px solid var(--line);border-radius:8px;font-size:22px}
+.modal-actions{display:flex;justify-content:flex-end;gap:8px;margin-top:24px;flex-wrap:wrap}
+.price-card .btn{margin-top:auto}
+.price-card.featured .btn{background:var(--coral);border-color:var(--coral)}
+.footer-col button{display:block;background:none;border:0;padding:0;text-align:left;font-size:13px;color:var(--muted);margin-bottom:13px}
+.footer-col button:hover{text-decoration:underline;color:var(--violet)}
+@media(max-width:760px){.demo-side .logo{display:none}}
+@media(max-width:600px){.modal-box{padding:28px 18px}
+.modal-actions{display:grid}
+.billing .btn{flex:1}
+.hero-actions .button{width:100%;max-width:320px}}
+@media(prefers-reduced-motion:reduce){.btn{transition:none!important}
+.modal-box,.modal-back{animation:none!important}}
+@media print{#modalRoot .modal-back{position:static;display:block;padding:0;background:none}
+#modalRoot .modal-box{width:100%;max-height:none;overflow:visible;box-shadow:none;padding:0}
+#modalRoot .modal-box>*:not(.print-target){display:none!important}}
+.footer-wordmark,.dd-btn,.button,.btn{font-family:"Sora","IBM Plex Sans",sans-serif}
+.button.dark{background:var(--gradient);border-color:transparent;color:#fff}
+.nav{background:rgba(18,12,36,.94);border-color:rgba(255,255,255,.1);color:#fff;pointer-events:auto;gap:18px}
+.nav .logo img,.footer .logo img{height:34px;width:auto;display:block}
+.links{gap:clamp(10px,1.7vw,24px)}
+.links>a,.dd-btn:not(.button){color:rgba(255,255,255,.78);font-size:13px;font-weight:600}
+.links>a:hover,.feat-dd.open .dd-btn,.feat-dd .dd-btn:hover{color:#fff}
+.dd{position:relative}
+.dd-btn{display:inline-flex;align-items:center;gap:5px;background:none;border:0;cursor:pointer;padding:0}
+.dd-btn svg{width:14px;height:14px;transition:transform .35s var(--ease)}
+.dd.open .dd-btn svg{transform:rotate(180deg)}
+.cta-dd .dd-btn{padding:0 16px}
+.mega,.cta-menu{position:absolute;top:calc(100% + 18px);background:var(--paper);color:var(--ink);border:1px solid var(--line);border-radius:14px;box-shadow:0 28px 70px rgba(18,12,36,.22);opacity:0;visibility:hidden;transform:translateY(-8px) scale(.98);transform-origin:top center;transition:opacity .3s var(--ease),transform .35s var(--ease),visibility .3s}
+.mega::before,.cta-menu::before{content:"";position:absolute;left:0;right:0;top:-20px;height:20px}
+.dd.open>.mega,.dd.open>.cta-menu{opacity:1;visibility:visible;transform:none}
+.mega{left:50%;width:min(720px,90vw);margin-left:calc(min(720px,90vw)/-2);padding:20px}
+.mega-label{display:block;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--violet);margin:0 0 12px 10px}
+.mega-grid{display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(6,auto);grid-auto-flow:column;gap:2px 10px}
+.mega-grid a,.cta-menu a{display:block;padding:9px 10px;border-radius:8px;font-size:13px;font-weight:600;color:var(--ink);transition:background .2s,color .2s,transform .25s var(--ease)}
+.mega-grid a:hover{background:var(--violet-soft);color:var(--violet);transform:translateX(3px)}
+.cta-menu{right:0;width:250px;padding:8px}
+.cta-menu a b{display:block;font-size:14px}
+.cta-menu small{display:block;color:var(--muted);font-size:12px;font-weight:500;margin-top:2px}
+.cta-menu a:hover{background:var(--violet-soft)}
+.cta-menu a:hover b{color:var(--violet)}
+.dd.open .cta-menu a{animation:ddIn .4s var(--ease) both}
+.dd.open .cta-menu a+a{animation-delay:.06s}
+@keyframes ddIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+.menu-toggle{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.18);color:#fff}
+.mobile-menu{pointer-events:auto;max-height:calc(100vh - 100px);overflow:auto}
+.mobile-menu a,.m-feat summary{display:block;padding:12px 16px;border-radius:7px;font-size:14px;font-weight:700;color:var(--ink)}
+.m-feat summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center}
+.m-feat summary::-webkit-details-marker{display:none}
+.m-feat summary svg{width:16px;transition:transform .3s var(--ease)}
+.m-feat[open] summary svg{transform:rotate(180deg)}
+.m-feat>div{display:grid;grid-template-columns:1fr 1fr;padding:0 6px 8px;border-left:2px solid var(--violet-soft);margin-left:16px}
+.m-feat>div a{font-size:13px;font-weight:500;padding:8px 10px;color:var(--muted)}
+.m-cta{display:grid;gap:8px;padding:10px 6px 4px}
+.m-cta .button{justify-content:center;width:100%}
+.footer{background:#120c24;color:#fff}
+.footer-top{grid-template-columns:1.3fr .7fr 1.5fr .9fr}
+.footer-col strong{color:#fff}
+.footer-col a,.footer-col button,.footer-bottom{color:rgba(255,255,255,.62)}
+.footer-col a:hover,.footer-col button:hover{color:#fff}
+.footer-feats>div{display:grid;grid-template-columns:1fr 1fr;column-gap:18px}
+.footer-description{color:rgba(255,255,255,.85);font-weight:500;font-size:16px}
+.footer-cta{display:flex;gap:8px;flex-wrap:wrap;margin-top:24px}
+.footer-cta .button:not(.dark){background:transparent;color:#fff;border-color:rgba(255,255,255,.3)}
+.footer-bottom{border-color:rgba(255,255,255,.12)}
+.footer-wordmark{background:var(--gradient);-webkit-background-clip:text;background-clip:text;color:transparent;opacity:.9}
+@media(max-width:1080px){.links{display:none}
+.menu-toggle{display:flex}
+.mobile-menu[data-open="true"]{display:block}}
+@media(max-width:900px){.footer-top{grid-template-columns:1fr 1fr}
+.footer-about,.footer-feats{grid-column:1/-1}}
+@media(max-width:600px){.nav .logo img{height:26px}
+.cta-dd .dd-btn{padding:0 10px}
+.cta-menu{width:min(250px,80vw)}
+.footer-top{grid-template-columns:1fr}
+.footer-feats>div{grid-template-columns:1fr}}
+.site{max-width:none!important;padding:0!important;margin:0!important}
+.page{border-radius:0!important}
+.nav-shell{position:fixed;top:0;left:0;right:0;width:100%!important;max-width:none;margin:0;padding:0;z-index:100}
+.nav{width:100%;border-radius:0}
+.mobile-menu{top:100%;max-height:calc(100dvh - 64px);border-radius:0 0 11px 11px}
+@media(max-width:1080px){.actions .cta-dd{display:none}}
+@media(max-width:850px){.mobile-menu{max-height:calc(100dvh - 58px)}}
+:root{--orbit-rose:#b81968;--orbit-red:#cf3c50;--orbit-orange:#cc702c;--orbit-rust:#c45930;--orbit-purple:#7505a8;--orbit-violet:#6c01e5;--orbit-grid:rgba(105,108,117,.055);--orbit-line:#181818;--orbit-glow:0 0 0 4px var(--violet-soft),0 8px 24px rgba(108,1,244,.22);--onyx-ring-gradient:conic-gradient(from -35deg,#8e00ff,#ef227f 19%,#ff982c 33%,#fa712a 44%,#e000a7 65%,#6500ff 80%,#8e00ff)}
+@media(max-width:600px){.hero .button.coral{background:var(--orbit-orange);border-color:var(--orbit-orange);width:100%;max-width:355px}}
+:root{--orbit-glass:rgba(255,255,255,.78);--orbit-glass-border:rgba(255,255,255,.9);--orbit-modal-shadow:0 16px 48px rgba(18,12,36,.18);--orbit-hover-shadow:0 0 0 4px var(--violet-soft),0 8px 24px rgba(108,1,244,.22)}
+.orbit-modal-actions .button{flex:1;padding:0 10px;font-size:12px;white-space:nowrap}
+.orbit-modal-actions .button[aria-disabled="true"]{opacity:.5;cursor:not-allowed;box-shadow:none;transform:none}
+:root{--page:#fff;--canvas:#fff;--module-copy-surface:rgba(255,255,255,.96)}
+.page{background-color:var(--paper)}
+
+
+.nav .logo img{height:42px;width:auto;max-width:100%;object-fit:contain}
+.footer .logo img{height:52px;width:auto;max-width:100%;object-fit:contain}
+@media(max-width:1100px) and (min-width:851px){.nav{gap:18px}
+.nav .links{gap:16px}}
+@media(max-width:600px){.nav .logo img{height:36px}
+.nav{gap:8px}
+.footer .logo img{height:46px}}
+@media(max-width:360px){.nav .logo img{height:32px}
+.nav{gap:5px}
+.nav .cta-dd .dd-btn{padding:0 8px;gap:5px}}
+
+/* About page: shared Onyx theme with narrow-screen safeguards. */
+html{-webkit-text-size-adjust:100%;scroll-padding-top:96px}
+body{margin:0;background:var(--paper);font-family:"IBM Plex Sans",system-ui,sans-serif;letter-spacing:0}
+#main{padding-top:64px}
+#main .hero{background:var(--paper)}
+#main .display,#main .hero-role,#main .mono,#main .story-label,#main .story-sig .n,#main .story-body .pull,#main .build-row .num,#main .build-row h3,#main .principle h3,#main .principle .pnum,#main .tl .when,#main .tl h3,#main .stat .n,#main .vision .quote,#main .vision .attrib,#main .portrait-cap .name,#main .portrait-frame .tag{font-family:"Sora","IBM Plex Sans",sans-serif}
+#main .display{font-weight:700}
+#main .hero h1 .accent,#main .cta-box h2 .accent{background:var(--gradient);background-clip:text;-webkit-background-clip:text;color:transparent}
+#main .btn{padding:0 17px;font-family:"Sora","IBM Plex Sans",sans-serif;font-size:13px;font-weight:800;min-height:44px;border-radius:9px;line-height:1.2;white-space:normal;text-align:center}
+#main .btn.solid{background:var(--gradient);border:1px solid transparent;color:var(--paper)}
+#main .btn.line{background:var(--paper);border:1px solid var(--line);color:var(--ink)}
+#main .btn.ghost{border-color:transparent;background:transparent;color:var(--muted)}
+#main .eyebrow{color:var(--violet);font-family:"Sora",sans-serif;font-weight:700}
+#main .hero-grid{grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr)}
+#main .hero-grid>*{min-width:0}
+#main h1,#main h2,#main h3,#main p,#main dd{overflow-wrap:break-word}
+#main .hero-role{line-height:1.7}
+#main .hero-actions .btn,#main .cta-actions .btn{max-width:100%;white-space:nowrap}#main .btn .arr{width:14px;height:14px;flex:0 0 14px}
+.footer-top>*{min-width:0}
+.footer-col a,.footer-col button{overflow-wrap:anywhere;width:auto}.footer-feats>div{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}@media(max-width:600px){.footer-feats>div{grid-template-columns:minmax(0,1fr)}}
+.mobile-menu[ data-open="false"]{display:none}
+@media(min-width:851px) and (max-width:1080px){.mobile-menu{position:absolute;top:100%;left:0;right:0;background:var(--paper);border:1px solid var(--line);box-shadow:var(--shadow);padding:9px}}
+@media(max-width:960px){#main .hero-grid{grid-template-columns:minmax(0,1fr)}#main .hero h1{font-size:72px}}
+@media(max-width:850px){#main{padding-top:58px}}
+@media(max-width:640px){#main .hero h1{font-size:52px}#main .hero{padding:48px 0 64px}#main .hero-grid{gap:40px}#main .hero-meta{gap:20px}#main .cta-box{padding:32px 22px}#main .cta-actions{width:100%}#main .cta-actions .btn{flex:1 1 140px}.m-feat>div{grid-template-columns:minmax(0,1fr)}.nav .logo{min-width:0}.nav .logo img{max-width:100%;height:auto;max-height:36px}.footer .logo img{max-width:100%;height:auto;max-height:46px}.footer-feats{grid-column:auto}}
+@media(max-width:360px){#main .hero h1{font-size:44px}#main .wrap{padding:0 16px}#main .build-row{grid-template-columns:30px minmax(0,1fr);gap:12px}#main .stats-row{gap:28px 16px}#main .stat .n{font-size:40px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+
+#legalDialog{position:fixed;inset:0;margin:auto;width:min(680px,calc(100% - 32px));max-height:calc(100dvh - 40px);border:1px solid var(--line);color:var(--ink);animation:none}#legalDialog::backdrop{background:rgba(10,10,14,.65)}#legalDialog:not([open]){display:none}
+
+/* Solutions: the original Onyx chrome, with a dedicated editorial industry layout. */
+.solutions-main h1,.solutions-main h2,.solutions-main h3{font-family:"Sora",sans-serif;letter-spacing:0;overflow-wrap:break-word}
+.solutions-main h1{font-size:64px;line-height:1.12;margin:22px 0 25px;font-weight:700}
+.solutions-main h1 span{background:var(--gradient);background-clip:text;-webkit-background-clip:text;color:transparent}
+.solutions-hero{padding:72px 0 0;background:var(--paper)}
+.solutions-lead{font-size:28px;line-height:1.4;font-weight:500;margin:0 0 20px}
+.hero-description{max-width:730px;font-size:19px;color:var(--ink-soft);margin:0 0 30px;line-height:1.7}
+.hero-strip{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;padding:28px 0;margin-top:54px;border-top:1px solid var(--line);color:var(--muted);font-size:14px;font-weight:500}
+.market-directory{background:var(--canvas);padding:62px 0 70px;border-top:1px solid var(--line)}
+.directory-heading{display:flex;align-items:end;justify-content:space-between;gap:36px;margin-bottom:32px}
+.solutions-main h2{font-size:36px;line-height:1.25;margin:14px 0 0;font-weight:600}
+.directory-heading p{max-width:330px;margin:0;color:var(--muted)}
+.market-links{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--line)}
+.market-links a{display:flex;align-items:center;gap:14px;padding:20px 16px 20px 0;border-bottom:1px solid var(--line);min-height:90px;transition:color .2s,background .2s}
+.market-links a:hover{background:var(--violet-soft);color:var(--violet)}
+.market-links a>span:nth-child(2){flex:1;min-width:0;font-weight:600;font-size:16px;line-height:1.35}
+.market-links small{display:block;font-size:12px;color:var(--muted);font-weight:400;margin-top:5px}
+.market-index{font-family:"Sora",sans-serif;font-size:11px;color:var(--violet);flex:0 0 22px}
+.arr{width:16px;height:16px;flex:0 0 16px}
+.market-section{padding:76px 0;border-top:1px solid var(--line);scroll-margin-top:84px}
+.market-section:nth-of-type(even){background:var(--canvas)}
+.market-heading{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.35fr);gap:60px;margin-bottom:40px}
+.market-heading .eyebrow{font-size:11px;letter-spacing:0;display:block}
+.market-heading h2{font-size:34px}
+.market-intro{font-size:17px;line-height:1.75;color:var(--ink-soft);margin:0}
+.fit-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 48px;padding:30px 0 34px;border-top:1px solid var(--line)}
+.fit-point h3,.foundation-grid h3{font-size:17px;line-height:1.5;font-weight:600;margin:0 0 9px}
+.fit-point p,.foundation-grid p{font-size:16px;color:var(--ink-soft);line-height:1.75;margin:0}
+.scenario{border-left:3px solid var(--violet);padding:6px 0 6px 22px;max-width:850px;margin:0 0 28px}
+.scenario strong{font-size:13px;font-family:"Sora",sans-serif;color:var(--violet)}
+.scenario p{font-size:16px;line-height:1.7;margin:8px 0 0;color:var(--ink-soft)}
+.module-row{display:flex;align-items:baseline;gap:20px;flex-wrap:wrap;padding-top:24px;border-top:1px solid var(--line)}
+.module-row>strong{font-size:12px;flex:0 0 170px;color:var(--muted);font-weight:500}
+.module-row>div{display:flex;gap:10px 20px;flex-wrap:wrap;flex:1;min-width:0}
+.module-row span{font-size:13px;color:var(--ink);overflow-wrap:break-word}
+.market-actions{display:flex;justify-content:space-between;gap:20px;margin-top:26px;flex-wrap:wrap}
+.market-actions a{font-size:13px;color:var(--violet);font-weight:600;display:inline-flex;align-items:center;gap:8px;min-height:44px}
+.market-actions a:last-child{color:var(--muted)}
+.market-actions a:hover{text-decoration:underline}
+.solutions-foundation{padding:76px 0;background:var(--violet-soft);border-top:1px solid var(--line)}
+.foundation-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:36px;margin-top:40px}
+.scope-note{font-size:13px;color:var(--muted);line-height:1.8;margin:36px 0 0;max-width:960px;border-top:1px solid var(--line);padding-top:22px}
+.solutions-cta{padding:72px 0}
+.solutions-cta>.wrap{display:flex;align-items:center;justify-content:space-between;gap:40px}
+.solutions-cta p{color:var(--ink-soft);max-width:500px;margin:18px 0 0;font-size:17px}
+.solutions-main .eyebrow{letter-spacing:0}
+@media(min-width:641px){.solutions-main .wrap{padding-left:32px;padding-right:32px}}
+@media(max-width:960px){.market-links{grid-template-columns:repeat(2,minmax(0,1fr))}.market-heading{grid-template-columns:minmax(0,1fr);gap:24px}.foundation-grid{grid-template-columns:1fr;gap:28px}.solutions-cta>.wrap{align-items:start;flex-direction:column}.directory-heading{align-items:start;flex-direction:column;gap:18px}.directory-heading p{max-width:600px}}
+@media(max-width:640px){.solutions-main .wrap{padding:0 22px}.solutions-hero{padding:48px 0 0}.solutions-main h1{font-size:42px;margin-top:18px}.solutions-lead{font-size:22px}.hero-description{font-size:17px}.hero-strip{grid-template-columns:repeat(2,minmax(0,1fr));margin-top:36px;font-size:12px;gap:16px}.market-directory{padding:44px 0}.solutions-main h2,.market-heading h2{font-size:28px}.market-links{grid-template-columns:minmax(0,1fr)}.market-links a{padding-right:0;min-height:80px}.market-section{padding:50px 0;scroll-margin-top:74px}.market-heading{margin-bottom:28px}.market-intro{font-size:16px}.fit-grid{grid-template-columns:minmax(0,1fr);gap:24px}.module-row{display:block}.module-row>div{margin-top:12px}.market-actions{gap:4px 20px}.solutions-foundation,.solutions-cta{padding:50px 0}.solutions-main .cta-actions{width:100%}.solutions-main .hero-actions .btn,.solutions-main .cta-actions .btn{white-space:normal;flex:1 1 170px}.solutions-main .eyebrow{font-size:11px}}
+@media(max-width:360px){.solutions-main .wrap{padding:0 16px}.solutions-main h1{font-size:36px}.solutions-main h2,.market-heading h2{font-size:25px}}
+@media print{.nav-shell,.market-directory,.market-actions,.footer,.solutions-cta,.hero-actions{display:none!important}#main{padding-top:0}.market-section{break-inside:avoid}.solutions-hero{padding-top:0}}
+
+</style>
+</head>
+<body>
+<a href="#main" class="skip">Skip to content</a>
+<div class="site"><div class="page">
+<div class="nav-shell"><nav class="nav" aria-label="Main navigation">
+<a class="logo" href="https://onyxhrms.com/" aria-label="Onyx HRMS, home"><img src="https://raw.githubusercontent.com/onyxoperations/onyx/refs/heads/main/logo.png" alt="Onyx HRMS" width="1899" height="543"></a>
+<div class="links"><a href="https://onyxhrms.com/about">About</a><a href="https://onyxhrms.com/product">Product</a><div class="dd feat-dd"><button type="button" class="dd-btn" aria-expanded="false" aria-haspopup="true">Features <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button><div class="mega" role="menu"><span class="mega-label">Every Onyx module</span><div class="mega-grid"><a href="https://onyxhrms.com/features/employee-management">Employee Management</a><a href="https://onyxhrms.com/features/geo-fenced-biometric-attendance">Geo-fenced Biometric Attendance</a><a href="https://onyxhrms.com/features/payroll-automation">Payroll Automation</a><a href="https://onyxhrms.com/features/shift-management">Shift Management</a><a href="https://onyxhrms.com/features/leave-management">Leave Management</a><a href="https://onyxhrms.com/features/salary-slips">Salary Slips</a><a href="https://onyxhrms.com/features/recruitment-management">Recruitment Management</a><a href="https://onyxhrms.com/features/file-management">File Management</a><a href="https://onyxhrms.com/features/document-generation">Document Generation</a><a href="https://onyxhrms.com/features/template-editor">Template Editor</a><a href="https://onyxhrms.com/features/reports">Reports</a><a href="https://onyxhrms.com/features/task-management">Task Management</a><a href="https://onyxhrms.com/features/employee-portal">Employee Portal</a><a href="https://onyxhrms.com/features/messenger">Messenger</a><a href="https://onyxhrms.com/features/biometric-device-integration">Biometric Device Integration</a><a href="https://onyxhrms.com/features/role-based-access">Role-based Access</a><a href="https://onyxhrms.com/features/performance-management">Performance Management</a></div></div></div><a href="https://onyxhrms.com/#pricing">Pricing</a><a href="https://onyxhrms.com/solutions">Solutions</a><a href="https://onyxhrms.com/careers">Careers</a><a href="https://onyxhrms.com/contact">Contact</a></div>
+<div class="actions"><div class="dd cta-dd"><button type="button" class="button dark dd-btn" aria-expanded="false" aria-haspopup="true">Get Started <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button><div class="cta-menu" role="menu"><a href="https://onyxhrms.com/#demo"><b>Try Live Demo</b><small>Explore Onyx in your browser</small></a><a href="https://onyxhrms.com/get-started"><b>Get Your Onyx</b><small>Set up Onyx for your team</small></a></div></div><button type="button" class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button></div>
+</nav><div id="mobile-menu" class="mobile-menu" data-open="false"><a href="https://onyxhrms.com/about">About</a><a href="https://onyxhrms.com/product">Product</a><details class="m-feat"><summary>Features <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></summary><div><a href="https://onyxhrms.com/features/employee-management">Employee Management</a><a href="https://onyxhrms.com/features/geo-fenced-biometric-attendance">Geo-fenced Biometric Attendance</a><a href="https://onyxhrms.com/features/payroll-automation">Payroll Automation</a><a href="https://onyxhrms.com/features/shift-management">Shift Management</a><a href="https://onyxhrms.com/features/leave-management">Leave Management</a><a href="https://onyxhrms.com/features/salary-slips">Salary Slips</a><a href="https://onyxhrms.com/features/recruitment-management">Recruitment Management</a><a href="https://onyxhrms.com/features/file-management">File Management</a><a href="https://onyxhrms.com/features/document-generation">Document Generation</a><a href="https://onyxhrms.com/features/template-editor">Template Editor</a><a href="https://onyxhrms.com/features/reports">Reports</a><a href="https://onyxhrms.com/features/task-management">Task Management</a><a href="https://onyxhrms.com/features/employee-portal">Employee Portal</a><a href="https://onyxhrms.com/features/messenger">Messenger</a><a href="https://onyxhrms.com/features/biometric-device-integration">Biometric Device Integration</a><a href="https://onyxhrms.com/features/role-based-access">Role-based Access</a><a href="https://onyxhrms.com/features/performance-management">Performance Management</a></div></details><a href="https://onyxhrms.com/#pricing">Pricing</a><a href="https://onyxhrms.com/solutions">Solutions</a><a href="https://onyxhrms.com/careers">Careers</a><a href="https://onyxhrms.com/contact">Contact</a><div class="m-cta"><a class="button dark" href="https://onyxhrms.com/#demo">Try Live Demo</a><a class="button" href="https://onyxhrms.com/get-started">Get Your Onyx</a></div></div></div>
+<main id="main" class="solutions-main">
+<section class="solutions-hero"><div class="wrap"><span class="eyebrow">One connected HR workspace</span><h1>Onyx <span>Solutions.</span></h1><p class="solutions-lead">Different markets.<br>The same need to put people first.</p><p class="hero-description">From corporate offices and growing businesses to round-the-clock operations and customer-facing teams, see how Onyx connects the people, attendance, leave, payroll and hiring behind your business.</p><div class="hero-actions"><a class="btn solid" href="#markets">Find your market <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a class="btn line" href="https://onyxhrms.com/#demo">Try live demo <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div><div class="hero-strip"><span>People &amp; hiring</span><span>Attendance &amp; shifts</span><span>Leave &amp; payroll</span><span>Documents &amp; performance</span></div></div></section>
+<section class="market-directory" id="markets" aria-labelledby="markets-title"><div class="wrap"><div class="directory-heading"><div><span class="eyebrow">Explore by market</span><h2 id="markets-title">Your industry. Your people.</h2></div><p>Explore 18 workforce environments, from knowledge-based teams to field operations.</p></div><nav class="market-links" aria-label="Industry directory"><a href="#corporates"><span class="market-index">01</span><span>Corporates &amp; Enterprises<small>Structured organizations</small></span><svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a href="#smes"><span class="market-index">02</span><span>SMEs &amp; Growing Businesses<small>Growing teams</small></span><svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a href="#call-centers"><span class="market-index">03</span><span>Call Centers<small>Shift-based operations</small></span><svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a href="#bpos"><span class="market-index">04</span><span>BPOs &amp; Outsourcing Firms<small>Shift-based operations</small></span><svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a href="#marketing"><span class="market-index">05</span><span>Marketing &amp; Creative Agencies<small>Knowledge-based teams</small></span><svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a href="#retail"><span class="market-index">06</span><span>Retail &amp; E-commerce<small>Customer-facing teams</small></span><svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a href="#hotels"><span class="market-index">07</span><span>Hotels &amp; Hospitality<small>Customer-facing teams</small></span><svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a href="#restaurants"><span class="market-index">08</span><span>Restaurants &amp; Food Services<small>Customer-facing teams</small></span><svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a href="#manufacturing"><span class="market-index">09</span><span>Manufacturing &amp; Industrial Teams<small>Field &amp; production teams</small></span><svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a href="#healthcare"><span class="market-index">10</span><span>Healthcare &amp; Clinics<small>Essential services</small></span><svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a href="#education"><span class="market-index">11</span><span>Education &amp; Training<small>Essential services</small></span><svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a href="#logistics"><span class="market-index">12</span><span>Logistics &amp; Warehousing<small>Field &amp; production teams</small></span><svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a href="#construction"><span class="market-index">13</span><span>Construction &amp; Engineering<small>Field &amp; production teams</small></span><svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a href="#technology"><span class="market-index">14</span><span>Technology &amp; Software Companies<small>Knowledge-based teams</small></span><svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a href="#professional-services"><span class="market-index">15</span><span>Professional Services<small>Knowledge-based teams</small></span><svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a href="#security-facilities"><span class="market-index">16</span><span>Security &amp; Facilities Management<small>Field &amp; production teams</small></span><svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a href="#nonprofits"><span class="market-index">17</span><span>NGOs &amp; Nonprofits<small>Essential services</small></span><svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a href="#real-estate"><span class="market-index">18</span><span>Real Estate &amp; Property Services<small>Customer-facing teams</small></span><svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></nav></div></section>
+<section class="market-section" id="corporates" aria-labelledby="corporates-title"><div class="wrap"><div class="market-heading"><div><span class="eyebrow">01 / Structured organizations</span><h2 id="corporates-title">Corporates &amp; Enterprises</h2></div><p class="market-intro">Departments, reporting lines and sensitive people data need structure—not more disconnected spreadsheets. For corporate HR teams, Onyx brings employee administration, attendance, leave, payroll and recruitment into one workspace. HR can maintain consistent records while department managers and employees work within the access assigned to them.</p></div><div class="fit-grid"><div class="fit-point"><h3>A clearer organizational picture</h3><p>Maintain employee profiles, departments and reporting relationships together, so HR has a dependable reference for who works where and who manages whom.</p></div><div class="fit-point"><h3>Controlled access to people data</h3><p>Use role-based access to separate HR administration from employee self-service. Assign permissions intentionally rather than sharing unrestricted personnel files.</p></div><div class="fit-point"><h3>Connected monthly administration</h3><p>Review attendance and leave alongside payroll inputs, adjustments and salary slips. Keep the underlying employee records consistent across the monthly HR cycle.</p></div><div class="fit-point"><h3>Consistent hiring and documentation</h3><p>Manage recruitment records and use document templates for employment letters. Store personnel files centrally instead of recreating the same paperwork in each department.</p></div></div><div class="scenario"><strong>A practical Onyx workflow</strong><p>A corporate HR team reviews attendance, confirms approved leave and payroll adjustments, then generates salary slips while employees access their own information through the portal.</p></div><div class="module-row"><strong>Relevant Onyx modules</strong><div><span>Employee Management</span><span>Role-based Access</span><span>Payroll Automation</span><span>Reports</span></div></div><div class="market-actions"><a href="https://onyxhrms.com/contact">Discuss your workforce needs <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a href="#markets">All markets ↑</a></div></div></section><section class="market-section" id="smes" aria-labelledby="smes-title"><div class="wrap"><div class="market-heading"><div><span class="eyebrow">02 / Growing teams</span><h2 id="smes-title">SMEs &amp; Growing Businesses</h2></div><p class="market-intro">When a founder or a small HR team manages everything, fragmented records quickly become a daily burden. Onyx gives small and medium-sized businesses a shared foundation for employee information, attendance, leave and pay. It supports a more organized way of working without requiring a separate tool for every routine HR responsibility.</p></div><div class="fit-grid"><div class="fit-point"><h3>One place for employee essentials</h3><p>Keep contact details, job information and employee files organized so the owner, HR administrator and authorized managers work from the same records.</p></div><div class="fit-point"><h3>Less repetitive payroll preparation</h3><p>Use attendance records and configured payroll settings to prepare pay calculations and salary slips, with a final review before payroll is approved.</p></div><div class="fit-point"><h3>Employee self-service</h3><p>Give staff access to their own information and available leave functions through the employee portal, reducing routine requests directed to the business owner.</p></div><div class="fit-point"><h3>A repeatable hiring process</h3><p>Track recruitment and maintain reusable document templates so new hires follow a consistent process as the business grows.</p></div></div><div class="scenario"><strong>A practical Onyx workflow</strong><p>A growing business moves employee records, leave requests and monthly pay preparation out of separate spreadsheets and into a single HR workflow.</p></div><div class="module-row"><strong>Relevant Onyx modules</strong><div><span>Employee Management</span><span>Employee Portal</span><span>Leave Management</span><span>Salary Slips</span></div></div><div class="market-actions"><a href="https://onyxhrms.com/contact">Discuss your workforce needs <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a href="#markets">All markets ↑</a></div></div></section><section class="market-section" id="call-centers" aria-labelledby="call-centers-title"><div class="wrap"><div class="market-heading"><div><span class="eyebrow">03 / Shift-based operations</span><h2 id="call-centers-title">Call Centers</h2></div><p class="market-intro">Call centers run on reliable staffing across changing shifts, including evening and night operations. Onyx can support the people-management side of that environment through shift assignments, attendance records, leave administration and recruitment. Supervisors gain a clearer administrative view of their teams while HR can prepare payroll from reviewed workforce records.</p></div><div class="fit-grid"><div class="fit-point"><h3>Organized shift assignments</h3><p>Use shift management to document who is assigned to each schedule. Review attendance against those assignments rather than relying only on informal supervisor notes.</p></div><div class="fit-point"><h3>Visibility into attendance</h3><p>Track check-ins and attendance records through supported attendance methods. Review lateness and absences before deciding how they should affect payroll under company policy.</p></div><div class="fit-point"><h3>Leave decisions with staffing context</h3><p>Keep leave requests and balances visible to authorized managers so approvals can be considered alongside the planned shift roster.</p></div><div class="fit-point"><h3>Support frequent hiring</h3><p>Keep applicants and recruitment activity organized, then maintain employee files and onboarding documents for agents joining the team.</p></div></div><div class="scenario"><strong>A practical Onyx workflow</strong><p>A supervisor checks attendance for the assigned shift, HR reviews absence records and leave approvals, and payroll uses the confirmed inputs at month-end.</p></div><div class="module-row"><strong>Relevant Onyx modules</strong><div><span>Shift Management</span><span>Geo-fenced Biometric Attendance</span><span>Leave Management</span><span>Recruitment Management</span></div></div><div class="market-actions"><a href="https://onyxhrms.com/contact">Discuss your workforce needs <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a href="#markets">All markets ↑</a></div></div></section><section class="market-section" id="bpos" aria-labelledby="bpos-title"><div class="wrap"><div class="market-heading"><div><span class="eyebrow">04 / Shift-based operations</span><h2 id="bpos-title">BPOs &amp; Outsourcing Firms</h2></div><p class="market-intro">Business process outsourcing firms coordinate teams across functions, client assignments and working schedules. Onyx can organize the employees behind those operations: their records, attendance, shifts, leave and HR documents. It helps HR and authorized team leads maintain administrative consistency while keeping employee access separate from management responsibilities.</p></div><div class="fit-grid"><div class="fit-point"><h3>Structure teams around operations</h3><p>Use departments and employee records to reflect the organization’s working structure, including support, finance operations and back-office delivery teams.</p></div><div class="fit-point"><h3>Coordinate different schedules</h3><p>Maintain shift assignments and review attendance for teams working different hours, rather than combining every team into one generic attendance sheet.</p></div><div class="fit-point"><h3>Keep HR responsibilities distinct</h3><p>Assign access by role so employee self-service and management responsibilities stay separate. Review permissions when people move between teams.</p></div><div class="fit-point"><h3>Keep hiring and people records connected</h3><p>Manage recruitment records, employee documents and performance information together to support consistent administration during team expansion and turnover.</p></div></div><div class="scenario"><strong>A practical Onyx workflow</strong><p>An outsourcing firm organizes staff by operational team, reviews each team’s attendance and leave, and prepares payroll from the same employee records.</p></div><div class="module-row"><strong>Relevant Onyx modules</strong><div><span>Employee Management</span><span>Shift Management</span><span>Role-based Access</span><span>Performance Management</span></div></div><div class="market-actions"><a href="https://onyxhrms.com/contact">Discuss your workforce needs <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a href="#markets">All markets ↑</a></div></div></section><section class="market-section" id="marketing" aria-labelledby="marketing-title"><div class="wrap"><div class="market-heading"><div><span class="eyebrow">05 / Knowledge-based teams</span><h2 id="marketing-title">Marketing &amp; Creative Agencies</h2></div><p class="market-intro">Marketing agencies balance creative specialists, account teams and fast-moving deadlines. Onyx fits the internal people layer: employee records, attendance, leave, task assignments and performance administration. Agency leaders can keep HR organized while teams coordinate work through task management and messenger, without treating the HR platform as a replacement for their advertising or creative production tools.</p></div><div class="fit-grid"><div class="fit-point"><h3>Organize specialist teams</h3><p>Maintain profiles and departments for designers, strategists, account managers and content teams so ownership and reporting relationships remain clear.</p></div><div class="fit-point"><h3>Keep work assignments visible</h3><p>Use task management for internal assignments and follow-ups. Messenger gives employees an additional place to communicate about work within the platform.</p></div><div class="fit-point"><h3>Plan leave around team availability</h3><p>Review leave requests and attendance records alongside internal assignments, helping managers identify when key team members will be unavailable.</p></div><div class="fit-point"><h3>Support development and hiring</h3><p>Use performance management for employee reviews and recruitment management to organize applicants as the agency adds specialist roles.</p></div></div><div class="scenario"><strong>A practical Onyx workflow</strong><p>An agency manager reviews upcoming leave, assigns internal tasks to available staff and records employee performance separately from campaign analytics.</p></div><div class="module-row"><strong>Relevant Onyx modules</strong><div><span>Task Management</span><span>Messenger</span><span>Leave Management</span><span>Performance Management</span></div></div><div class="market-actions"><a href="https://onyxhrms.com/contact">Discuss your workforce needs <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a href="#markets">All markets ↑</a></div></div></section><section class="market-section" id="retail" aria-labelledby="retail-title"><div class="wrap"><div class="market-heading"><div><span class="eyebrow">06 / Customer-facing teams</span><h2 id="retail-title">Retail &amp; E-commerce</h2></div><p class="market-intro">Retail businesses depend on store teams, supervisors and support staff showing up for the right shifts. Onyx can support HR administration for shops, showrooms and the people behind e-commerce operations. It brings employee records, schedules, attendance and payroll preparation together while leaving sales transactions, stock control and online orders to the business’s retail systems.</p></div><div class="fit-grid"><div class="fit-point"><h3>Keep store staff organized</h3><p>Maintain employee records and departments that reflect store and support teams. Keep job and contact information available to authorized HR users.</p></div><div class="fit-point"><h3>Document coverage and attendance</h3><p>Use shift assignments and approved attendance methods to record staff availability and attendance, giving supervisors a clearer starting point for coverage decisions.</p></div><div class="fit-point"><h3>Handle leave consistently</h3><p>Keep leave requests and balances together so managers can review overlapping absences instead of relying on messages scattered across different channels.</p></div><div class="fit-point"><h3>Prepare reviewed pay records</h3><p>Connect workforce records with configured payroll calculations and salary slips. Review adjustments and attendance exceptions before finalizing pay.</p></div></div><div class="scenario"><strong>A practical Onyx workflow</strong><p>A store supervisor reviews the roster and attendance, confirms leave decisions and passes reviewed workforce records into the monthly payroll process.</p></div><div class="module-row"><strong>Relevant Onyx modules</strong><div><span>Shift Management</span><span>Leave Management</span><span>Payroll Automation</span><span>Employee Portal</span></div></div><div class="market-actions"><a href="https://onyxhrms.com/contact">Discuss your workforce needs <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a href="#markets">All markets ↑</a></div></div></section><section class="market-section" id="hotels" aria-labelledby="hotels-title"><div class="wrap"><div class="market-heading"><div><span class="eyebrow">07 / Customer-facing teams</span><h2 id="hotels-title">Hotels &amp; Hospitality</h2></div><p class="market-intro">Hotels bring together front-office, housekeeping, food service, maintenance and administrative staff across a long operating day. Onyx can help HR organize those employee groups and their working schedules, maintain attendance and leave records, and prepare pay. It focuses on the workforce behind guest service rather than reservations, room inventory or property-management transactions.</p></div><div class="fit-grid"><div class="fit-point"><h3>Structure hotel departments</h3><p>Keep employee information organized across front-office, housekeeping, food and beverage, maintenance and management teams.</p></div><div class="fit-point"><h3>Maintain working schedules</h3><p>Use shift management to record duty assignments and review attendance, helping supervisors identify staffing gaps that require a human decision.</p></div><div class="fit-point"><h3>Review leave with service needs</h3><p>Maintain leave requests and balances so department heads can consider absences against planned staffing for busy periods.</p></div><div class="fit-point"><h3>Standardize personnel administration</h3><p>Keep employee documents and recruitment records organized, and use templates for HR letters as seasonal and permanent staff join the operation.</p></div></div><div class="scenario"><strong>A practical Onyx workflow</strong><p>A hotel HR team reviews departmental schedules, reconciles attendance and approved leave, and generates salary slips from the confirmed payroll inputs.</p></div><div class="module-row"><strong>Relevant Onyx modules</strong><div><span>Shift Management</span><span>Employee Management</span><span>Document Generation</span><span>Payroll Automation</span></div></div><div class="market-actions"><a href="https://onyxhrms.com/contact">Discuss your workforce needs <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a href="#markets">All markets ↑</a></div></div></section><section class="market-section" id="restaurants" aria-labelledby="restaurants-title"><div class="wrap"><div class="market-heading"><div><span class="eyebrow">08 / Customer-facing teams</span><h2 id="restaurants-title">Restaurants &amp; Food Services</h2></div><p class="market-intro">Restaurants, cafés and catering teams need dependable staffing across preparation, service and closing hours. Onyx can organize the employee records, shifts, attendance and leave behind those routines. Owners and supervisors gain a more consistent way to administer their people while kitchen operations, ordering and point-of-sale activity remain in the tools built for them.</p></div><div class="fit-grid"><div class="fit-point"><h3>Organize service and kitchen teams</h3><p>Maintain employee information for chefs, servers, cashiers, delivery staff and support roles, with responsibilities reflected in the organization’s records.</p></div><div class="fit-point"><h3>Record shift assignments</h3><p>Use shift management to document opening, service and closing schedules. Review attendance against the assigned duties.</p></div><div class="fit-point"><h3>Reduce informal leave handling</h3><p>Keep requests and balances in one place so managers can make staffing decisions with a visible record of approved absences.</p></div><div class="fit-point"><h3>Keep employment paperwork consistent</h3><p>Maintain employee files and create routine HR letters from templates, supporting a repeatable process when new staff join.</p></div></div><div class="scenario"><strong>A practical Onyx workflow</strong><p>A restaurant supervisor reviews the service roster and leave requests, then HR checks attendance records before preparing monthly pay.</p></div><div class="module-row"><strong>Relevant Onyx modules</strong><div><span>Shift Management</span><span>Leave Management</span><span>File Management</span><span>Salary Slips</span></div></div><div class="market-actions"><a href="https://onyxhrms.com/contact">Discuss your workforce needs <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a href="#markets">All markets ↑</a></div></div></section><section class="market-section" id="manufacturing" aria-labelledby="manufacturing-title"><div class="wrap"><div class="market-heading"><div><span class="eyebrow">09 / Field &amp; production teams</span><h2 id="manufacturing-title">Manufacturing &amp; Industrial Teams</h2></div><p class="market-intro">Manufacturing businesses coordinate production workers, supervisors, maintenance staff and office teams. Onyx can support their workforce administration through structured employee records, shifts, attendance and payroll preparation. It gives HR a shared record of who is employed and when they worked; production planning, machine monitoring and inventory remain separate operational systems.</p></div><div class="fit-grid"><div class="fit-point"><h3>Separate departments clearly</h3><p>Organize employees across production, quality, maintenance, stores and administration using consistent employee and department records.</p></div><div class="fit-point"><h3>Maintain shift and attendance records</h3><p>Document scheduled shifts and review attendance using supported biometric or geo-fenced attendance options appropriate to the site.</p></div><div class="fit-point"><h3>Review pay inputs carefully</h3><p>Use confirmed attendance, leave and configured adjustments during payroll preparation. Apply company rules only after checking the relevant records.</p></div><div class="fit-point"><h3>Keep personnel files accessible</h3><p>Store employee documents and use templates for HR communications, while restricting access to sensitive records through assigned roles.</p></div></div><div class="scenario"><strong>A practical Onyx workflow</strong><p>A factory HR administrator reviews attendance across assigned shifts, confirms leave and adjustments, and prepares payroll with a documented employee record.</p></div><div class="module-row"><strong>Relevant Onyx modules</strong><div><span>Biometric Device Integration</span><span>Shift Management</span><span>Payroll Automation</span><span>File Management</span></div></div><div class="market-actions"><a href="https://onyxhrms.com/contact">Discuss your workforce needs <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a href="#markets">All markets ↑</a></div></div></section><section class="market-section" id="healthcare" aria-labelledby="healthcare-title"><div class="wrap"><div class="market-heading"><div><span class="eyebrow">10 / Essential services</span><h2 id="healthcare-title">Healthcare &amp; Clinics</h2></div><p class="market-intro">Clinics, hospitals and healthcare service providers need organized staff administration across clinical and non-clinical roles. Onyx can support employee records, working schedules, attendance, leave and payroll while helping authorized HR teams keep employment documents together. It is a workforce-management fit—not a patient-record system, clinical scheduling engine or substitute for healthcare-specific compliance processes.</p></div><div class="fit-grid"><div class="fit-point"><h3>Organize varied staff roles</h3><p>Maintain employee information for clinical staff, reception, administration and support teams, with departments and reporting relationships defined.</p></div><div class="fit-point"><h3>Record staff schedules</h3><p>Use shift management and attendance records for workforce administration. Supervisors remain responsible for staffing levels, qualifications and safe coverage.</p></div><div class="fit-point"><h3>Keep leave administration visible</h3><p>Maintain requests and balances so managers can consider leave against staffing needs and arrange replacements through their normal procedures.</p></div><div class="fit-point"><h3>Protect employment information</h3><p>Use role-based access and employee file management for personnel documents, with access assigned according to each person’s HR responsibility.</p></div></div><div class="scenario"><strong>A practical Onyx workflow</strong><p>A clinic manager reviews staff schedules and approved leave, while HR maintains employee files and prepares payroll without entering patient information.</p></div><div class="module-row"><strong>Relevant Onyx modules</strong><div><span>Shift Management</span><span>Role-based Access</span><span>Leave Management</span><span>Employee Management</span></div></div><div class="market-actions"><a href="https://onyxhrms.com/contact">Discuss your workforce needs <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a href="#markets">All markets ↑</a></div></div></section><section class="market-section" id="education" aria-labelledby="education-title"><div class="wrap"><div class="market-heading"><div><span class="eyebrow">11 / Essential services</span><h2 id="education-title">Education &amp; Training</h2></div><p class="market-intro">Schools, colleges, academies and training institutes manage teachers, administrators and support teams with different responsibilities. Onyx can bring their employment records, attendance, leave and salary administration together. It supports the institution’s people operations while academic timetabling, examinations, admissions and student records remain in the systems designed for those functions.</p></div><div class="fit-grid"><div class="fit-point"><h3>Keep staff records consistent</h3><p>Maintain teacher, administrative and support staff profiles together with departments, job details and employment files.</p></div><div class="fit-point"><h3>Review attendance and leave</h3><p>Keep employee attendance and approved leave visible to authorized administrators, rather than treating student attendance as the same workflow.</p></div><div class="fit-point"><h3>Prepare salary administration</h3><p>Use configured payroll settings and reviewed workforce records to calculate pay and generate salary slips for staff.</p></div><div class="fit-point"><h3>Organize hiring and letters</h3><p>Track recruitment for teaching and non-teaching roles, and generate employment-related documents from consistent templates.</p></div></div><div class="scenario"><strong>A practical Onyx workflow</strong><p>An institute’s HR administrator reviews staff attendance and leave, updates employee files and prepares salary slips for the monthly pay cycle.</p></div><div class="module-row"><strong>Relevant Onyx modules</strong><div><span>Employee Management</span><span>Leave Management</span><span>Salary Slips</span><span>Recruitment Management</span></div></div><div class="market-actions"><a href="https://onyxhrms.com/contact">Discuss your workforce needs <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a href="#markets">All markets ↑</a></div></div></section><section class="market-section" id="logistics" aria-labelledby="logistics-title"><div class="wrap"><div class="market-heading"><div><span class="eyebrow">12 / Field &amp; production teams</span><h2 id="logistics-title">Logistics &amp; Warehousing</h2></div><p class="market-intro">Logistics companies coordinate warehouse teams, dispatch staff, drivers and office employees. Onyx can help manage the people behind those activities through employee records, shift assignments, attendance and leave administration. Geo-fenced attendance can support check-ins at configured work locations; shipment tracking, vehicle routing and fleet telemetry remain outside the HR workflow.</p></div><div class="fit-grid"><div class="fit-point"><h3>Organize operational teams</h3><p>Maintain employee records for warehouse, dispatch, transport and administrative teams with a clear department structure.</p></div><div class="fit-point"><h3>Record work-location attendance</h3><p>Use supported geo-fenced attendance for configured locations where appropriate. Treat check-ins as attendance records, not continuous tracking of employees or vehicles.</p></div><div class="fit-point"><h3>Coordinate shifts and leave</h3><p>Maintain working schedules and approved leave records so supervisors can identify availability and arrange operational coverage.</p></div><div class="fit-point"><h3>Connect records to pay preparation</h3><p>Review attendance exceptions and payroll adjustments before generating salary slips, keeping HR calculations grounded in the confirmed records.</p></div></div><div class="scenario"><strong>A practical Onyx workflow</strong><p>A warehouse supervisor checks attendance at the configured work location, reviews leave and assigned shifts, and HR uses confirmed inputs for payroll.</p></div><div class="module-row"><strong>Relevant Onyx modules</strong><div><span>Geo-fenced Biometric Attendance</span><span>Shift Management</span><span>Reports</span><span>Payroll Automation</span></div></div><div class="market-actions"><a href="https://onyxhrms.com/contact">Discuss your workforce needs <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a href="#markets">All markets ↑</a></div></div></section><section class="market-section" id="construction" aria-labelledby="construction-title"><div class="wrap"><div class="market-heading"><div><span class="eyebrow">13 / Field &amp; production teams</span><h2 id="construction-title">Construction &amp; Engineering</h2></div><p class="market-intro">Construction and engineering businesses often manage site employees alongside office and technical staff. Onyx can bring their employment information, attendance, leave, documents and internal tasks into a more organized workflow. It supports site-oriented workforce administration where attendance locations are configured appropriately, while project costing, procurement and construction planning remain in specialist tools.</p></div><div class="fit-grid"><div class="fit-point"><h3>Keep site and office people records together</h3><p>Maintain employee profiles and departments for technical, administrative and site teams, with reporting lines recorded clearly.</p></div><div class="fit-point"><h3>Support attendance at configured sites</h3><p>Use geo-fenced attendance where the agreed work location and device requirements fit the site. Review exceptions rather than assuming every worker has the same setup.</p></div><div class="fit-point"><h3>Maintain personnel documentation</h3><p>Keep employment files accessible to authorized HR users and create routine HR letters through document templates.</p></div><div class="fit-point"><h3>Coordinate internal follow-ups</h3><p>Use task management and messenger for internal assignments and communication, alongside the company’s existing project-management processes.</p></div></div><div class="scenario"><strong>A practical Onyx workflow</strong><p>An engineering company configures an agreed attendance location, reviews site staff check-ins and keeps employment files and office HR records together.</p></div><div class="module-row"><strong>Relevant Onyx modules</strong><div><span>Geo-fenced Biometric Attendance</span><span>File Management</span><span>Task Management</span><span>Employee Management</span></div></div><div class="market-actions"><a href="https://onyxhrms.com/contact">Discuss your workforce needs <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a href="#markets">All markets ↑</a></div></div></section><section class="market-section" id="technology" aria-labelledby="technology-title"><div class="wrap"><div class="market-heading"><div><span class="eyebrow">14 / Knowledge-based teams</span><h2 id="technology-title">Technology &amp; Software Companies</h2></div><p class="market-intro">Technology companies grow through specialized teams, frequent hiring and evolving reporting structures. Onyx can support that growth by connecting employee information, recruitment, leave, documents and performance administration. It offers a shared HR workspace for people operations while software delivery, source control, product planning and technical incident management stay in the team’s development tools.</p></div><div class="fit-grid"><div class="fit-point"><h3>Maintain a clear team structure</h3><p>Organize engineering, product, design, sales and operations employees through departments, employee records and reporting relationships.</p></div><div class="fit-point"><h3>Create a consistent hiring record</h3><p>Use recruitment management to organize applicants and maintain employment documents as successful candidates join the team.</p></div><div class="fit-point"><h3>Support employee self-service</h3><p>Give staff access to their own available HR information and leave functions through the employee portal, with permissions set intentionally.</p></div><div class="fit-point"><h3>Keep development conversations documented</h3><p>Use performance management for employee reviews and internal tasks for HR follow-ups without conflating them with software-delivery metrics.</p></div></div><div class="scenario"><strong>A practical Onyx workflow</strong><p>A software company manages recruitment records, keeps new employee documents together and handles leave and performance administration in the same HR workspace.</p></div><div class="module-row"><strong>Relevant Onyx modules</strong><div><span>Recruitment Management</span><span>Employee Portal</span><span>Performance Management</span><span>Document Generation</span></div></div><div class="market-actions"><a href="https://onyxhrms.com/contact">Discuss your workforce needs <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a href="#markets">All markets ↑</a></div></div></section><section class="market-section" id="professional-services" aria-labelledby="professional-services-title"><div class="wrap"><div class="market-heading"><div><span class="eyebrow">15 / Knowledge-based teams</span><h2 id="professional-services-title">Professional Services</h2></div><p class="market-intro">Consultancies, accounting practices, legal firms and other professional service businesses depend on organized people administration as much as specialist expertise. Onyx can maintain employee records, leave, internal tasks, performance information and pay administration. It supports the firm’s workforce processes without claiming to replace client case management, billable-time tracking or professional practice software.</p></div><div class="fit-grid"><div class="fit-point"><h3>Organize practice and support teams</h3><p>Maintain employee records for professional staff, administrators and business-support roles with departments and reporting lines.</p></div><div class="fit-point"><h3>Coordinate internal availability</h3><p>Review leave and attendance records so managers can plan internal coverage and assign work through the firm’s established procedures.</p></div><div class="fit-point"><h3>Manage HR follow-ups</h3><p>Use task management and messenger for internal assignments and communication, separate from client-specific billing or case records.</p></div><div class="fit-point"><h3>Keep documentation and reviews consistent</h3><p>Store employment files, generate routine HR letters and maintain performance information in a shared administrative workflow.</p></div></div><div class="scenario"><strong>A practical Onyx workflow</strong><p>A consulting firm reviews leave availability, assigns internal follow-ups and maintains employee review records alongside routine payroll administration.</p></div><div class="module-row"><strong>Relevant Onyx modules</strong><div><span>Task Management</span><span>Performance Management</span><span>File Management</span><span>Leave Management</span></div></div><div class="market-actions"><a href="https://onyxhrms.com/contact">Discuss your workforce needs <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a href="#markets">All markets ↑</a></div></div></section><section class="market-section" id="security-facilities" aria-labelledby="security-facilities-title"><div class="wrap"><div class="market-heading"><div><span class="eyebrow">16 / Field &amp; production teams</span><h2 id="security-facilities-title">Security &amp; Facilities Management</h2></div><p class="market-intro">Security providers, cleaning companies and facilities teams manage employees whose work is often organized by site and shift. Onyx can support the HR side through employee records, schedules, attendance, leave and payroll. It gives administrators a more consistent workforce record while incident response, patrol monitoring and service-contract management remain with the company’s operational systems.</p></div><div class="fit-grid"><div class="fit-point"><h3>Maintain employee and site-team structure</h3><p>Organize guards, cleaners, technicians and supervisors through employee records and departments that reflect the working organization.</p></div><div class="fit-point"><h3>Document shifts and check-ins</h3><p>Use shift assignments and supported attendance methods appropriate to configured work locations, reviewing missed or unusual records.</p></div><div class="fit-point"><h3>Keep leave decisions recorded</h3><p>Maintain employee leave requests and balances so supervisors can identify absences and arrange replacements through normal dispatch procedures.</p></div><div class="fit-point"><h3>Prepare pay from reviewed inputs</h3><p>Review attendance, leave and company-approved adjustments before generating payroll and salary slips.</p></div></div><div class="scenario"><strong>A practical Onyx workflow</strong><p>A facilities supervisor reviews assigned shifts and recorded absences, arranges coverage manually and sends confirmed workforce records into payroll preparation.</p></div><div class="module-row"><strong>Relevant Onyx modules</strong><div><span>Shift Management</span><span>Geo-fenced Biometric Attendance</span><span>Leave Management</span><span>Payroll Automation</span></div></div><div class="market-actions"><a href="https://onyxhrms.com/contact">Discuss your workforce needs <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a href="#markets">All markets ↑</a></div></div></section><section class="market-section" id="nonprofits" aria-labelledby="nonprofits-title"><div class="wrap"><div class="market-heading"><div><span class="eyebrow">17 / Essential services</span><h2 id="nonprofits-title">NGOs &amp; Nonprofits</h2></div><p class="market-intro">Nonprofits and social-impact organizations need dependable employee administration while directing attention toward their mission. Onyx can organize staff records, attendance, leave, employment documents and payroll in one workspace. It helps authorized administrators maintain consistent information, while donor management, grant accounting, beneficiary records and program-impact reporting remain separate specialist responsibilities.</p></div><div class="fit-grid"><div class="fit-point"><h3>Organize program and office staff</h3><p>Keep employment records for program teams, administrators and support staff with a clear department structure.</p></div><div class="fit-point"><h3>Maintain staff attendance and leave</h3><p>Use attendance and leave management for employee administration, with location-based check-ins configured only where appropriate to the work.</p></div><div class="fit-point"><h3>Keep employment documents together</h3><p>Store employee files and use document templates for routine HR letters, reducing inconsistent paperwork across teams.</p></div><div class="fit-point"><h3>Maintain controlled HR visibility</h3><p>Assign role-based access and use workforce reports to support internal review without exposing sensitive personnel information unnecessarily.</p></div></div><div class="scenario"><strong>A practical Onyx workflow</strong><p>A nonprofit HR team maintains employee files, reviews staff leave and attendance, and prepares payroll separately from grant and donor accounting.</p></div><div class="module-row"><strong>Relevant Onyx modules</strong><div><span>Employee Management</span><span>Reports</span><span>Role-based Access</span><span>File Management</span></div></div><div class="market-actions"><a href="https://onyxhrms.com/contact">Discuss your workforce needs <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a href="#markets">All markets ↑</a></div></div></section><section class="market-section" id="real-estate" aria-labelledby="real-estate-title"><div class="wrap"><div class="market-heading"><div><span class="eyebrow">18 / Customer-facing teams</span><h2 id="real-estate-title">Real Estate &amp; Property Services</h2></div><p class="market-intro">Real estate agencies and property-service businesses bring together sales teams, office staff and on-site support roles. Onyx can support their employee administration through records, attendance, leave, tasks and payroll preparation. It helps keep the people side organized while property listings, sales pipelines, tenant accounts and commission calculations remain in the relevant business tools unless separately confirmed.</p></div><div class="fit-grid"><div class="fit-point"><h3>Organize sales and support employees</h3><p>Maintain employee profiles and departments for agency, administrative and property-service teams with clear reporting relationships.</p></div><div class="fit-point"><h3>Keep HR availability visible</h3><p>Review attendance and leave records for workforce planning. Configure attendance locations only where they match the employee’s agreed working arrangement.</p></div><div class="fit-point"><h3>Track internal assignments</h3><p>Use task management and messenger for employee follow-ups and internal coordination, alongside existing property and sales systems.</p></div><div class="fit-point"><h3>Standardize employment administration</h3><p>Keep employee files and letters consistent, and prepare salary slips from reviewed payroll settings and inputs.</p></div></div><div class="scenario"><strong>A practical Onyx workflow</strong><p>A property-services manager reviews employee availability and internal tasks while HR maintains files and prepares pay independently of property transactions.</p></div><div class="module-row"><strong>Relevant Onyx modules</strong><div><span>Task Management</span><span>Employee Management</span><span>Document Generation</span><span>Payroll Automation</span></div></div><div class="market-actions"><a href="https://onyxhrms.com/contact">Discuss your workforce needs <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a href="#markets">All markets ↑</a></div></div></section>
+<section class="solutions-foundation"><div class="wrap"><span class="eyebrow">The shared foundation</span><h2>Built around your workforce.<br>Not your industry’s paperwork.</h2><div class="foundation-grid"><div><h3>One employee record</h3><p>Keep employee information, attendance, leave and HR documents connected instead of maintaining a separate list for each responsibility.</p></div><div><h3>Your operational context</h3><p>Set up departments, shifts, attendance locations, permissions and payroll settings to reflect your agreed working practices.</p></div><div><h3>A reviewed HR workflow</h3><p>Give administrators and employees the access they need, with people responsible for reviewing exceptions, pay calculations and employment decisions.</p></div></div><p class="scope-note">Onyx supports workforce and HR administration. Industry examples illustrate potential use of the modules shown on the Onyx website; feature availability depends on your plan and configuration. Discuss specific shift rules, sites, devices, payroll requirements and integrations with Onyx before purchase. Sector-specific operational software and legal compliance remain separate responsibilities.</p></div></section>
+<section class="solutions-cta"><div class="wrap"><div><span class="eyebrow">Let’s talk about your team</span><h2>Find your fit<br>with Onyx.</h2><p>Tell us how your people work, and discuss the right setup for your organization.</p></div><div class="cta-actions"><a class="btn solid" href="https://onyxhrms.com/contact">Discuss your needs <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a class="btn line" href="https://onyxhrms.com/#demo">Try live demo <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div></section>
+</main><footer class="footer"><div class="footer-top"><div class="footer-about"><a class="logo" href="https://onyxhrms.com/" aria-label="Onyx HRMS, home"><img src="https://raw.githubusercontent.com/onyxoperations/onyx/refs/heads/main/logo.png" alt="Onyx HRMS" width="1899" height="543"></a><p class="footer-description">Onyx HRMS is an enterprise management platform that automates HR operations and streamlines workforce efficiency across the employee lifecycle.</p><div class="footer-cta"><a class="button dark" href="https://onyxhrms.com/#demo">Try Live Demo</a><a class="button" href="https://onyxhrms.com/get-started">Get Your Onyx</a></div></div><div class="footer-col"><strong>Company</strong><a href="https://onyxhrms.com/about">About</a><a href="https://onyxhrms.com/product">Product</a><a href="https://onyxhrms.com/#pricing">Pricing</a><a href="https://onyxhrms.com/solutions">Solutions</a><a href="https://onyxhrms.com/careers">Careers</a><a href="https://onyxhrms.com/contact">Contact</a></div><div class="footer-col footer-feats"><strong>Features</strong><div><a href="https://onyxhrms.com/features/employee-management">Employee Management</a><a href="https://onyxhrms.com/features/geo-fenced-biometric-attendance">Geo-fenced Biometric Attendance</a><a href="https://onyxhrms.com/features/payroll-automation">Payroll Automation</a><a href="https://onyxhrms.com/features/shift-management">Shift Management</a><a href="https://onyxhrms.com/features/leave-management">Leave Management</a><a href="https://onyxhrms.com/features/salary-slips">Salary Slips</a><a href="https://onyxhrms.com/features/recruitment-management">Recruitment Management</a><a href="https://onyxhrms.com/features/file-management">File Management</a><a href="https://onyxhrms.com/features/document-generation">Document Generation</a><a href="https://onyxhrms.com/features/template-editor">Template Editor</a><a href="https://onyxhrms.com/features/reports">Reports</a><a href="https://onyxhrms.com/features/task-management">Task Management</a><a href="https://onyxhrms.com/features/employee-portal">Employee Portal</a><a href="https://onyxhrms.com/features/messenger">Messenger</a><a href="https://onyxhrms.com/features/biometric-device-integration">Biometric Device Integration</a><a href="https://onyxhrms.com/features/role-based-access">Role-based Access</a><a href="https://onyxhrms.com/features/performance-management">Performance Management</a></div></div><div class="footer-col"><strong>Policies</strong><button data-legal="privacy">Privacy</button><button data-legal="terms">Terms of service</button><button data-legal="refund">Refund &amp; Cancellation</button><button data-legal="billing">Payment &amp; Billing</button><button data-legal="security">Security</button></div></div><div class="footer-bottom"><span>© <span id="year">2026</span> Onyx HRMS. All rights reserved.</span></div></footer>
+</div></div>
+<dialog id="legalDialog" class="modal-box" aria-labelledby="legalTitle"><button type="button" class="modal-close" data-close aria-label="Close dialog">×</button><h2 id="legalTitle"></h2><div id="legalBody"></div><div class="modal-actions"><button type="button" class="button" data-close>Close</button></div></dialog>
+<script>
+(()=>{'use strict';
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const reveals=document.querySelectorAll('.reveal');
+if('IntersectionObserver' in window&&!reduce){const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.08});reveals.forEach(el=>io.observe(el))}else reveals.forEach(el=>el.classList.add('in'));
+const menuButton=document.querySelector('.menu-toggle'),menu=document.querySelector('.mobile-menu');function closeMenu(){menu.dataset.open='false';menuButton.setAttribute('aria-expanded','false');menuButton.setAttribute('aria-label','Open menu')}menuButton.addEventListener('click',()=>{const open=menu.dataset.open!=='true';menu.dataset.open=String(open);menuButton.setAttribute('aria-expanded',String(open));menuButton.setAttribute('aria-label',open?'Close menu':'Open menu')});menu.querySelectorAll('a').forEach(link=>link.addEventListener('click',closeMenu));document.addEventListener('click',e=>{if(!e.target.closest('.nav-shell'))closeMenu()});
+addEventListener('keydown',e=>{if(e.key==='Escape')closeMenu()});
+matchMedia('(min-width:1081px)').addEventListener('change',closeMenu);
+document.getElementById('year').textContent=new Date().getFullYear();
+      const legal = {
+        privacy: `<p><strong>Last Updated:</strong> 9/26/2026</p>
+
+<p>Onyx HRMS (“Onyx”, “we”, “us” or “our”) respects the confidentiality and security of information processed through our website and HR management services. This Privacy Policy explains how information may be collected, used and protected when you visit our website, use the guest demonstration, contact us, or use a production Onyx account.</p>
+
+<h3>Information you choose to share</h3>
+<p>If you contact Onyx by email, phone or another available channel, we may receive the information you choose to provide, including your name, contact details, company information and the contents of your enquiry. We use this information to respond to requests, provide information about our services and communicate with you regarding your enquiry.</p>
+
+<p>Please do not submit sensitive employee, payroll, biometric, financial or other confidential information through general enquiry forms or public website channels.</p>
+
+<h3>Guest demonstration data</h3>
+<p>The on-page Onyx demonstration uses fictional records for demonstration purposes. Changes made within the guest demonstration are stored locally in your browser and are not intended to represent or create a production HRMS account.</p>
+
+<p>The guest demonstration does not collect biometric samples or intentionally transmit the fictional demonstration dataset to a production Onyx environment.</p>
+
+<h3>Local storage</h3>
+<p>The guest demonstration may use your browser’s local storage to remember demonstration changes between sessions. You can remove locally stored demonstration information using the available <strong>Reset Demo Data</strong> control or by clearing your browser’s site data.</p>
+
+<h3>Production customer information</h3>
+<p>Customers using a production Onyx account may provide information relating to their organization, employees, attendance, shifts, leave, payroll, recruitment and other HR processes. Such information is processed to provide and maintain the contracted services.</p>
+
+<p>Customers are responsible for ensuring that information submitted to Onyx is collected and processed lawfully and that appropriate notices, permissions or authorizations are obtained where required.</p>
+
+<h3>Payment information</h3>
+<p>Payments may be processed through authorized third-party payment providers. Onyx may receive transaction references, invoice information, payment status and other information required to verify and reconcile payments. Sensitive payment credentials such as card PINs, wallet PINs, passwords and one-time passwords should never be submitted to Onyx through ordinary support channels.</p>
+
+<h3>Technical information</h3>
+<p>Depending on how you use the website or production services, technical information such as browser type, device information, IP address, access times, security logs and general usage information may be processed for security, functionality, troubleshooting and service improvement.</p>
+
+<h3>How information is used</h3>
+<p>Information may be used to provide and maintain Onyx services, process transactions, respond to enquiries, provide support, maintain security, improve functionality, prevent misuse and comply with applicable legal obligations.</p>
+
+<h3>Third-party services</h3>
+<p>Onyx may use trusted third-party providers for hosting, payment processing, communications, security, analytics and other operational requirements. Such providers may process information only as necessary to provide their services or fulfill applicable legal obligations.</p>
+
+<h3>Data security</h3>
+<p>Onyx applies reasonable technical and organizational measures intended to protect information against unauthorized access, alteration, disclosure, loss or misuse. However, no internet-based system can guarantee absolute security.</p>
+
+<h3>Data retention</h3>
+<p>Information may be retained for as long as reasonably necessary to provide services, maintain business and transaction records, resolve disputes, protect security and comply with applicable legal or regulatory requirements. Specific retention arrangements for production customers may be defined in the applicable service agreement.</p>
+
+<h3>Your rights</h3>
+<p>Depending on applicable law and the nature of the information, you may request information concerning personal data processed by Onyx or request correction of inaccurate information. Production customers may also have additional rights under their service agreement.</p>
+
+<h3>Policy updates</h3>
+<p>Onyx may update this Privacy Policy when our services, practices or legal requirements change. The latest version will be published on this website with an updated effective date.</p>
+
+<h3>Contact</h3>
+<p>For privacy-related questions or requests, contact Onyx using the official contact information provided on this website.</p>`,
+        terms: `<p><strong>Last Updated:</strong> 9/26/2026</p>
+
+<p>These Terms & Conditions (“Terms”) govern your access to and use of the Onyx HRMS website, guest demonstration, software platform and related services (“Services”). By accessing or using the Services, you agree to these Terms.</p>
+
+<h3>1. The Onyx service</h3>
+<p>Onyx HRMS is a cloud-based human resource management platform designed to assist organizations with employee management, attendance, shifts, leave, payroll, recruitment, employee self-service and related HR administration.</p>
+
+<p>Available features may vary according to the subscription plan, configuration and services purchased.</p>
+
+<h3>2. Guest demonstration</h3>
+<p>The website may provide an interactive guest demonstration for evaluation purposes. The demonstration uses fictional information and is not a production HRMS environment.</p>
+
+<p>Users should not enter real employee, payroll, biometric, financial or other confidential information into the guest demonstration.</p>
+
+<h3>3. Account registration</h3>
+<p>Customers must provide accurate and complete information when creating an Onyx account. Customers are responsible for maintaining the confidentiality of their account credentials and for activity conducted through their account.</p>
+
+<h3>4. Subscription and pricing</h3>
+<p>Onyx may be provided through monthly, annual or other subscription arrangements. The applicable plan, pricing, billing period, employee limits and included features will be displayed or communicated before purchase.</p>
+
+<p>Prices may change for future purchases or renewal periods. Any applicable taxes, charges or fees will be communicated where required.</p>
+
+<h3>5. Payments</h3>
+<p>Payments may be processed through authorized banks, payment gateways, digital wallets, QR payment systems or other supported payment providers.</p>
+
+<p>Onyx may delay activation where a payment has not been successfully verified. An invoice or payment reference does not by itself constitute confirmation of payment.</p>
+
+<h3>6. Digital delivery</h3>
+<p>Onyx is a digital service. No physical products are shipped. Following successful payment and any required verification, account access, credentials, onboarding instructions and applicable service information may be delivered electronically.</p>
+
+<h3>7. Customer responsibilities</h3>
+<p>Customers are responsible for the accuracy, legality and appropriate use of information entered into Onyx. Customers must ensure that employee and other personal information is collected and processed in accordance with applicable requirements.</p>
+
+<p>Customers are also responsible for reviewing employee records, attendance, leave balances, payroll settings, deductions and calculations before relying on them for business or employment decisions.</p>
+
+<h3>8. Payroll and HR information</h3>
+<p>Onyx provides software tools to assist with HR and payroll administration. Onyx does not replace professional legal, tax, accounting, payroll or employment advice.</p>
+
+<p>Customers remain responsible for compliance with applicable employment, tax, payroll and other legal requirements.</p>
+
+<h3>9. Acceptable use</h3>
+<p>You must not use Onyx for unlawful activity, fraud, unauthorized access, abuse, security attacks, malicious software, interference with the platform, unauthorized data extraction, reverse engineering where prohibited by law, or any activity that may compromise the service or other users.</p>
+
+<h3>10. Intellectual property</h3>
+<p>The Onyx name, branding, software, interface, designs, documentation, content and related intellectual property belong to Onyx or its licensors. A subscription grants a limited right to use the Services and does not transfer ownership of Onyx intellectual property.</p>
+
+<h3>11. Customer data</h3>
+<p>Customers retain ownership of information they submit to Onyx. Customers grant Onyx the rights reasonably necessary to host, process, transmit and display such information for the purpose of providing the Services, maintaining security and fulfilling contractual and legal obligations.</p>
+
+<h3>12. Third-party services</h3>
+<p>Onyx may integrate with third-party services including payment providers, hosting services, biometric systems, communication services and external APIs. Such services may be subject to separate terms and policies, and their availability may be outside Onyx’s control.</p>
+
+<h3>13. Service availability</h3>
+<p>Onyx aims to provide reliable service but does not guarantee uninterrupted or error-free availability. Service may be temporarily affected by maintenance, infrastructure failures, third-party outages, security incidents, internet disruptions or circumstances beyond our reasonable control.</p>
+
+<h3>14. Suspension and termination</h3>
+<p>Onyx may suspend or terminate access where reasonably necessary because of non-payment, misuse, security concerns, unlawful activity, material violation of these Terms or legal requirements.</p>
+
+<p>Customers may cancel their subscription in accordance with the applicable cancellation procedure.</p>
+
+<h3>15. Refunds</h3>
+<p>Refunds and cancellations are governed by the applicable Refund &amp; Cancellation Policy published on this website.</p>
+
+<h3>16. Disclaimer</h3>
+<p>To the maximum extent permitted by applicable law, the Services are provided on an “as available” basis. Onyx does not guarantee that the Services will meet every specific business requirement or that information generated by the platform will be suitable for every legal, tax, payroll or employment situation.</p>
+
+<h3>17. Limitation of liability</h3>
+<p>To the maximum extent permitted by applicable law, Onyx will not be liable for indirect, incidental, special, consequential or similar losses arising from the use of or inability to use the Services.</p>
+
+<p>To the extent permitted by law, Onyx’s aggregate liability relating to a customer’s use of the Services will be limited to the amount paid by that customer for the relevant Services during the applicable period preceding the event giving rise to the claim.</p>
+
+<h3>18. Changes to these Terms</h3>
+<p>Onyx may update these Terms when necessary to reflect changes in the Services, business practices or legal requirements. Updated Terms will be published on this website.</p>
+
+<h3>19. Governing law</h3>
+<p>These Terms shall be governed by the applicable laws of Pakistan. Disputes shall be subject to the jurisdiction of the competent courts of Pakistan, subject to applicable law.</p>
+
+<h3>20. Contact</h3>
+<p>For questions regarding these Terms, contact Onyx using the official contact information provided on this website.</p>`,
+        refund: `<p><strong>Last Updated:</strong> 9/26/2026</p>
+
+<p>This Refund &amp; Cancellation Policy applies to subscriptions, digital services, implementation services and other purchases made through Onyx HRMS.</p>
+
+<h3>1. Digital service</h3>
+<p>Onyx HRMS is a digital subscription service. No physical product is shipped. Once a subscription is activated, the customer receives access to software and related digital services.</p>
+
+<h3>2. Subscription cancellation</h3>
+<p>Customers may request cancellation through the official Onyx support channel.</p>
+
+<p>Unless otherwise agreed, cancellation prevents future renewal charges but does not automatically refund the current paid subscription period. Access normally remains available until the end of the paid period.</p>
+
+<h3>3. Refund eligibility</h3>
+<p>A refund may be considered where:</p>
+
+<ul>
+<li>The customer was charged more than once for the same transaction.</li>
+<li>An incorrect amount was charged due to an error attributable to Onyx.</li>
+<li>A payment was processed after a valid cancellation request that should have prevented the charge.</li>
+<li>Onyx is materially unable to provide the purchased service due to an issue attributable to Onyx.</li>
+<li>A refund is otherwise required under applicable law.</li>
+</ul>
+
+<h3>4. Generally non-refundable circumstances</h3>
+<p>Unless required by law or expressly approved by Onyx, refunds are generally not provided solely because:</p>
+
+<ul>
+<li>The customer changed their mind.</li>
+<li>The customer did not use the service.</li>
+<li>The customer did not log in after purchase.</li>
+<li>The customer no longer requires the service.</li>
+<li>The customer failed to use available features.</li>
+<li>The customer experienced an internal or technical issue unrelated to Onyx.</li>
+<li>The customer requests a refund for unused time following voluntary cancellation.</li>
+</ul>
+
+<h3>5. Implementation and setup services</h3>
+<p>Separate setup, onboarding, configuration, customization, migration, training or implementation services may be subject to different refund conditions.</p>
+
+<p>Where such services have already been performed, the corresponding fees may be non-refundable to the extent permitted by applicable law.</p>
+
+<h3>6. Promotional pricing</h3>
+<p>Promotional, discounted, introductory or special-price subscriptions may be subject to additional terms communicated at the time of purchase.</p>
+
+<h3>7. Duplicate or incorrect payments</h3>
+<p>If you believe you have made a duplicate payment or paid an incorrect amount, contact Onyx promptly with the relevant invoice or transaction reference.</p>
+
+<h3>8. Payment reversals and disputes</h3>
+<p>Customers should contact Onyx regarding billing errors before initiating a payment dispute where reasonably possible. Nothing in this policy limits any rights available to a customer under applicable law.</p>
+
+<h3>9. Refund request</h3>
+<p>A refund request should include the customer or company name, registered account email, invoice or transaction reference, payment date, amount paid and reason for the request.</p>
+
+<h3>10. Refund processing</h3>
+<p>Approved refunds will normally be returned through the original payment method. Processing time may depend on the relevant bank, payment gateway, digital wallet or other financial institution.</p>
+
+<h3>11. Account status following refund</h3>
+<p>Where a refund is approved for a subscription, Onyx may cancel, suspend or adjust the associated subscription or account access as applicable.</p>
+
+<h3>12. Contact</h3>
+<p>Refund and cancellation requests may be submitted through the official Onyx support or contact channel provided on this website.</p>`,
+
+billing: `<p><strong>Last Updated:</strong> 9/26/2026</p>
+
+<p>This Payment &amp; Billing Policy explains how payments, invoices, subscriptions and billing are handled for Onyx HRMS.</p>
+
+<h3>1. Subscription pricing</h3>
+<p>Onyx may be offered through monthly, annual or other subscription arrangements. The applicable plan, price, billing period, employee limits and included features will be displayed or communicated before purchase.</p>
+
+<h3>2. Taxes and charges</h3>
+<p>Applicable taxes, government charges, payment-provider fees or other legally required charges may apply depending on the transaction and customer circumstances.</p>
+
+<h3>3. Payment methods</h3>
+<p>Onyx may accept payments through authorized banks, payment gateways, digital wallets, merchant QR systems, Raast or other supported electronic payment methods. Available payment methods may change over time.</p>
+
+<h3>4. Payment authorization</h3>
+<p>By submitting a payment, the customer confirms that the payment method is authorized for their use and that the selected plan, billing period and amount have been reviewed.</p>
+
+<h3>5. Invoices</h3>
+<p>Onyx may generate electronic invoices containing information such as invoice number, customer or company name, subscription plan, billing period, amount payable, applicable charges, payment status, transaction reference, issue date and due date where applicable.</p>
+
+<h3>6. Payment references</h3>
+<p>Where an invoice number, order number, payment reference or transaction ID is provided, customers should use the correct reference when making payment.</p>
+
+<p>An invoice or payment reference does not by itself constitute confirmation that payment has been received. Payment is considered successful only after verification through the applicable payment system or Onyx.</p>
+
+<h3>7. Payment verification</h3>
+<p>Onyx may verify payments through the relevant bank, merchant account, payment gateway, digital wallet, transaction reference or other authorized payment mechanism.</p>
+
+<p>Account activation may remain pending until payment is successfully verified.</p>
+
+<h3>8. Failed or pending payments</h3>
+<p>If a payment fails, expires, is rejected or cannot be verified, Onyx may keep the invoice pending, request a new payment, delay activation or request additional transaction information.</p>
+
+<p>Customers should not make repeated payments for the same invoice without first confirming its status.</p>
+
+<h3>9. Recurring subscriptions</h3>
+<p>Where recurring billing is offered and authorized, future payments may be processed according to the selected billing cycle. Customers may request cancellation before the next renewal date according to the applicable cancellation procedure.</p>
+
+<h3>10. Duplicate or incorrect payments</h3>
+<p>If you believe you have paid twice, paid an incorrect amount or paid against an incorrect invoice, contact Onyx promptly with the relevant transaction details.</p>
+
+<h3>11. Payment disputes</h3>
+<p>Customers should contact Onyx regarding suspected billing errors before initiating a payment dispute where reasonably possible. Nothing in this policy limits rights available under applicable law.</p>
+
+<h3>12. Fraud and payment security</h3>
+<p>Onyx will not ordinarily request banking passwords, wallet PINs, OTPs, card PINs or other confidential payment credentials through ordinary support communications.</p>
+
+<p>Customers should report suspicious payment requests or unauthorized transactions immediately.</p>
+
+<h3>13. Billing records</h3>
+<p>Onyx may retain invoices, transaction references, payment status information and related billing records for accounting, operational, security, dispute-resolution and legal purposes.</p>
+
+<h3>14. Contact</h3>
+<p>For billing or payment questions, contact Onyx using the official contact information provided on this website.</p>`,
+
+          security: `<p><strong>Last Updated:</strong> 9/26/2026</p>
+
+  <h3>1. Our Commitment to Security</h3>
+
+  <p>
+    At Onyx, the security and confidentiality of your organization's information
+    are important to us. Onyx is designed to help businesses manage sensitive
+    workforce information while maintaining appropriate controls over who can
+    access and manage that information.
+  </p>
+
+  <p>
+    We apply reasonable technical, organizational, and administrative safeguards
+    designed to protect company information and employee records against
+    unauthorized access, alteration, disclosure, misuse, loss, or destruction.
+  </p>
+
+  <h3>2. Secure Cloud Infrastructure</h3>
+
+  <p>
+    Onyx uses secure cloud infrastructure provided by established technology
+    providers to store and process customer information. Your organization's
+    information and employee records are maintained within Google's cloud
+    infrastructure and benefit from the security controls and infrastructure
+    protections provided by Google.
+  </p>
+
+  <p>
+    Onyx does not operate physical servers containing customer information from
+    ordinary office premises. Customer information is handled through cloud-based
+    systems designed to provide controlled access, reliability, and protection
+    against unauthorized use.
+  </p>
+
+  <h3>3. Protection of Company Information</h3>
+
+  <p>
+    Company information entered into Onyx may include organizational details,
+    employee records, attendance information, leave records, payroll information,
+    employment-related information, and other HR information configured by the
+    customer.
+  </p>
+
+  <p>
+    We take reasonable measures to protect this information from unauthorized
+    access, modification, disclosure, or misuse. Access to company information is
+    intended to be limited to authorized users and systems according to the
+    permissions applicable to their account.
+  </p>
+
+  <h3>4. Access Controls</h3>
+
+  <p>
+    Onyx is designed around controlled account access. Depending on the user's
+    role, different users may have different levels of access to company
+    information and HR functions.
+  </p>
+
+  <p>
+    Administrative access may include functions such as managing employees,
+    attendance, leave, payroll, recruitment, and other organizational settings,
+    while employee access may be limited to information and functions made
+    available to that employee.
+  </p>
+
+  <p>
+    Customers are responsible for assigning appropriate permissions and ensuring
+    that access to their organization's Onyx account is provided only to
+    authorized individuals.
+  </p>
+
+  <h3>5. Account Security</h3>
+
+  <p>
+    Customers are responsible for maintaining the confidentiality of their
+    account credentials. Login credentials should not be shared with unauthorized
+    individuals or stored in locations where they may be unnecessarily exposed.
+  </p>
+
+  <p>
+    Customers should immediately notify Onyx if they believe that an account,
+    password, or other authentication information has been compromised or used
+    without authorization.
+  </p>
+
+  <p>
+    We may take reasonable steps to protect accounts where we identify activity
+    that appears to indicate unauthorized access, misuse, or a security concern.
+  </p>
+
+  <h3>6. Authentication and Authorization</h3>
+
+  <p>
+    Access to Onyx is controlled through authentication mechanisms designed to
+    ensure that users are able to access only the areas and information permitted
+    by their account or assigned role.
+  </p>
+
+  <p>
+    Authentication information is intended to be used solely by the individual
+    to whom the account has been assigned. Customers should maintain appropriate
+    internal procedures for account creation, access management, password
+    protection, and account removal when an employee leaves the organization.
+  </p>
+
+  <h3>7. Data Transmission</h3>
+
+  <p>
+    Onyx uses secure communication mechanisms designed to protect information
+    while it is transmitted between a user's device and the systems supporting
+    the service.
+  </p>
+
+  <p>
+    Customers should access Onyx through supported and reasonably up-to-date
+    browsers, operating systems, and devices and should avoid accessing their
+    accounts from devices that they believe may be compromised.
+  </p>
+
+  <h3>8. Employee and Payroll Information</h3>
+
+  <p>
+    Onyx may process information that businesses consider confidential, including
+    employee names, contact information, attendance records, leave information,
+    payroll information, employment details, and other HR-related records.
+  </p>
+
+  <p>
+    We recognize the sensitive nature of such information and apply reasonable
+    safeguards intended to limit access to authorized users and protect the
+    information against unauthorized disclosure or misuse.
+  </p>
+
+  <p>
+    Customers remain responsible for determining what information they enter into
+    Onyx and for ensuring that their collection and use of employee information
+    complies with applicable laws, regulations, employment requirements, and
+    internal policies.
+  </p>
+
+  <h3>9. Payment Security</h3>
+
+  <p>
+    Onyx does not require customers to provide payment card credentials directly
+    to Onyx where payment processing is handled through a third-party payment
+    provider.
+  </p>
+
+  <p>
+    Payment information submitted through a third-party payment service is
+    processed according to that provider's security practices and applicable
+    terms and policies. Onyx does not intentionally store complete payment card
+    credentials in its ordinary business records.
+  </p>
+
+  <h3>10. Data Access and Confidentiality</h3>
+
+  <p>
+    Onyx treats customer information as confidential business information.
+    Customer data is not sold or intentionally provided to unrelated third
+    parties for their own marketing purposes.
+  </p>
+
+  <p>
+    Access to customer information is restricted to authorized access required
+    for operating, maintaining, securing, supporting, or improving the Onyx
+    service, subject to applicable policies and contractual obligations.
+  </p>
+
+  <p>
+    We may disclose information where reasonably necessary to comply with legal
+    obligations, enforce our agreements, protect the security of the service, or
+    prevent fraud, abuse, or other unlawful activity.
+  </p>
+
+  <h3>11. Third-Party Service Providers</h3>
+
+  <p>
+    Onyx may rely on established third-party technology and infrastructure
+    providers to operate certain aspects of the service.
+  </p>
+
+  <p>
+    Such providers may process or store information on behalf of Onyx as
+    necessary to provide their services. We seek to use providers that maintain
+    appropriate security practices and infrastructure protections.
+  </p>
+
+  <p>
+    Third-party providers may have their own privacy policies, security
+    practices, and terms of service. Where applicable, customers should review
+    the policies of relevant providers for additional information.
+  </p>
+
+  <h3>12. Monitoring and Security Measures</h3>
+
+  <p>
+    We may use reasonable monitoring, access-control, logging, authentication,
+    and operational security measures to help identify unauthorized activity,
+    service abuse, technical problems, or potential security incidents.
+  </p>
+
+  <p>
+    Security measures may be reviewed and updated periodically as the Onyx
+    service, technology environment, and security requirements evolve.
+  </p>
+
+  <h3>13. Data Integrity</h3>
+
+  <p>
+    Onyx is designed to maintain the integrity and consistency of customer
+    information during normal operation. Reasonable operational safeguards may
+    be used to reduce the risk of accidental alteration, unauthorized changes,
+    or loss of information.
+  </p>
+
+  <p>
+    Customers should nevertheless maintain appropriate internal procedures and
+    records for information that is particularly important to their business,
+    including payroll and employment records where required by applicable law or
+    company policy.
+  </p>
+
+  <h3>14. Customer Responsibilities</h3>
+
+  <p>
+    Security is a shared responsibility. Customers are responsible for:
+  </p>
+
+  <ul>
+    <li>Keeping account credentials confidential.</li>
+    <li>Providing access only to authorized personnel.</li>
+    <li>Assigning appropriate roles and permissions.</li>
+    <li>Removing or restricting access when personnel no longer require it.</li>
+    <li>Using reasonably secure and up-to-date devices and browsers.</li>
+    <li>Protecting devices used to access Onyx from unauthorized use.</li>
+    <li>Reporting suspected unauthorized access or security incidents promptly.</li>
+    <li>Ensuring that information entered into Onyx is collected and used lawfully.</li>
+  </ul>
+
+  <h3>15. Guest Demo and Public Information</h3>
+
+  <p>
+    Information displayed within a public or guest demonstration environment is
+    intended for demonstration purposes and should not be treated as a secure
+    location for confidential company or employee information.
+  </p>
+
+  <p>
+    Customers and visitors should not enter real employee information, passwords,
+    financial credentials, confidential business information, or other sensitive
+    information into publicly accessible demonstration areas.
+  </p>
+
+  <h3>16. Security Incidents</h3>
+
+  <p>
+    If Onyx becomes aware of a confirmed security incident that materially
+    affects customer information, we will take reasonable steps to investigate
+    the incident, contain its impact, restore affected services where necessary,
+    and determine appropriate notification requirements.
+  </p>
+
+  <p>
+    Where notification is required by applicable law or contractual obligations,
+    affected customers will be notified through appropriate communication
+    channels, subject to legal, security, and investigative considerations.
+  </p>
+
+  <h3>17. Vulnerability Reporting</h3>
+
+  <p>
+    If you discover a potential security vulnerability, unauthorized access, or
+    other security concern involving Onyx, please report it privately to our
+    support team rather than publicly disclosing technical details.
+  </p>
+
+  <p>
+    Reports should include enough information for us to understand and
+    investigate the issue, including the affected feature, relevant account or
+    environment where appropriate, and steps required to reproduce the issue.
+  </p>
+
+  <h3>18. Data Retention and Account Closure</h3>
+
+  <p>
+    Customer information may be retained for as long as reasonably necessary to
+    provide the service, maintain business and financial records, comply with
+    legal obligations, resolve disputes, enforce agreements, or protect the
+    security of the service.
+  </p>
+
+  <p>
+    Following account cancellation or termination, information may be deleted,
+    archived, or retained in accordance with our applicable policies and legal
+    obligations.
+  </p>
+
+  <h3>19. No Absolute Security Guarantee</h3>
+
+  <p>
+    Although we take reasonable measures to protect customer information, no
+    internet-based service, cloud infrastructure, electronic transmission, or
+    data storage system can be guaranteed to be completely secure.
+  </p>
+
+  <p>
+    Accordingly, Onyx does not guarantee that unauthorized access, security
+    incidents, data loss, or other security events can never occur. Our objective
+    is to maintain reasonable and appropriate safeguards and continuously improve
+    the security of the service.
+  </p>
+
+  <h3>20. Changes to Security Practices</h3>
+
+  <p>
+    As Onyx develops, our security practices and safeguards may evolve. We may
+    periodically update this Security Policy to reflect changes to our service,
+    technology, operational practices, or applicable requirements.
+  </p>
+
+  <p>
+    The latest version of this Security Policy will be made available through
+    the Onyx website. The "Last Updated" date at the beginning of this policy
+    indicates when it was most recently revised.
+  </p>
+
+  <h3>21. Contact Us</h3>
+
+  <p>
+    If you have questions regarding the security of your information, wish to
+    report a security concern, or require clarification regarding our security
+    practices, please contact us:
+  </p>
+
+  <p>
+    <strong>Onyx HRMS</strong><br>
+    Email: <a href="mailto:support@onyxhrms.com">support@onyxhrms.com</a><br>
+    Website: <a href="https://onyxhrms.com" target="_blank" rel="noopener">
+      onyxhrms.com
+    </a>
+  </p>`,
+
+      };
+
+const dialog=document.getElementById('legalDialog');let previousFocus;
+const titles={privacy:'Privacy',terms:'Terms of service',refund:'Refund & Cancellation Policy',billing:'Payment & Billing Policy',security:'Security'};
+document.querySelectorAll('[data-legal]').forEach(b=>b.addEventListener('click',()=>{previousFocus=b;document.getElementById('legalTitle').textContent=titles[b.dataset.legal];document.getElementById('legalBody').innerHTML=legal[b.dataset.legal];dialog.showModal();document.body.style.overflow='hidden';dialog.scrollTop=0}));
+dialog.querySelectorAll('[data-close]').forEach(b=>b.addEventListener('click',()=>dialog.close()));
+dialog.addEventListener('click',e=>{if(e.target===dialog){const r=dialog.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)dialog.close()}});
+dialog.addEventListener('close',()=>{document.body.style.overflow='';previousFocus?.focus()});
+})();
+</script>
+<script>(()=>{const dds=[...document.querySelectorAll('.nav .dd')];const close=x=>dds.forEach(d=>{if(d!==x){d.classList.remove('open');d.querySelector('.dd-btn').setAttribute('aria-expanded','false')}});dds.forEach(d=>{const b=d.querySelector('.dd-btn');b.addEventListener('click',e=>{e.stopPropagation();const o=!d.classList.contains('open');close(d);d.classList.toggle('open',o);b.setAttribute('aria-expanded',String(o))});d.addEventListener('mouseenter',()=>{if(matchMedia('(hover:hover)').matches){close(d);d.classList.add('open');b.setAttribute('aria-expanded','true')}});d.addEventListener('mouseleave',()=>{if(matchMedia('(hover:hover)').matches){d.classList.remove('open');b.setAttribute('aria-expanded','false')}});d.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>close()))});document.addEventListener('click',e=>{if(!e.target.closest('.dd'))close()});document.addEventListener('keydown',e=>{if(e.key==='Escape')close()})})();</script>
+</body>
+</html>
